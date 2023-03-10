@@ -11,7 +11,8 @@ def main():
     '''
     forecast_data = weather_api.get_forecast()
     current_weather_data = weather_data.get_relevant_weather_information(forecast_data)
-    open_ai.generate_chat_completion('gpt-3.5-turbo', 'hi', temperature = 0.5)
+
+    open_ai.generate_chat_completion('gpt-3.5-turbo', messages, temperature = 0.5)
 
 
 if __name__ == "__main__":

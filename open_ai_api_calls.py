@@ -12,7 +12,7 @@ def generate_chat_completion(model_id, messages, temperature=1, top_p=1, n=1, st
     url = "https://api.openai.com/v1/chat/completions"
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': settings.OPENAI_API_KEY
+        'Authorization': f'Bearer {settings.OPENAI_API_KEY}'
     }
     data = {
         'model': model_id,
