@@ -1,4 +1,6 @@
-#put a description here
+'''
+weather data file
+'''
 
 def get_relevant_weather_information(forecast_data):
     # Get the value of "mintemp_f"
