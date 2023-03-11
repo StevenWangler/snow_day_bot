@@ -6,6 +6,7 @@ information and the more context that is provided, the more accurate of an answe
 we can get back from the model.
 '''
 import json
+import datetime
 
 
 def create_open_ai_message(current_weather_data):
@@ -15,7 +16,8 @@ def create_open_ai_message(current_weather_data):
     '''
     try:
         message = f'''Respond with a only percentage chance surrounded in parenthesis - for example: (67%) -
-        that a snowday will occur tomorrow for the following weather conditions:
+        that a snowday will occur tomorrow. If tomorrow is Saturday or Sunday, return (0%). The current
+        day of the week is {datetime.datetime.now().strftime("%A")}. Here are the weather conditions:
 
         The minimum temperature for the day will be {current_weather_data['current_day_mintemp_f']} degrees Fahrenheit, with
         a maximum temperature of {current_weather_data['current_day_maxtemp_f']} degrees Fahrenheit. The maximum wind speed
