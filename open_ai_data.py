@@ -21,19 +21,19 @@ def create_open_ai_message(current_weather_data):
 
         The minimum temperature for the day will be {current_weather_data['current_day_mintemp_f']} degrees Fahrenheit, with
         a maximum temperature of {current_weather_data['current_day_maxtemp_f']} degrees Fahrenheit. The maximum wind speed
-        for the day will be {current_weather_data['current_day_maxwind_mph']}MPH. As of now, there is a 
-        {current_weather_data['current_day_daily_chance_of_snow']}% chance that it will snow today. There is also a
-        {current_weather_data['current_day_daily_chance_of_rain']}% chance that it will rain today. The total amount of precipitation 
-        today is going to be around {current_weather_data['current_day_totalprecip_in']} inches. The average humidity for today is 
-        {current_weather_data['current_day_daily_avghumidity']}%. The current day conditions are {current_weather_data['current_day_conditions']}.
+        for the day will be {current_weather_data['current_day_maxwind_mph']}MPH. The wind chill (or "feels like") is currently
+        {current_weather_data['current_day_feelslike_f']} degrees Fahrenheit. As of now, there is a {current_weather_data['current_day_daily_chance_of_snow']}% 
+        chance that it will snow today. There is also a {current_weather_data['current_day_daily_chance_of_rain']}% chance that it will rain today. 
+        The total amount of precipitation today is going to be around {current_weather_data['current_day_totalprecip_in']} inches. The average humidity 
+        for today is {current_weather_data['current_day_daily_avghumidity']}%. The current day conditions are {current_weather_data['current_day_conditions']}.
 
         Tomorrow, the minimum temperature for the day will be {current_weather_data['next_day_mintemp_f']} degrees Fahrenheit, with
         a maximum temperature of {current_weather_data['next_day_maxtemp_f']} degrees Fahrenheit. The maximum wind speed
-        for the day will be {current_weather_data['next_day_maxwind_mph']}MPH. As of now, there is a 
-        {current_weather_data['next_day_daily_chance_of_snow']}% chance that it will snow tomorrow. There is also a
-        {current_weather_data['next_day_daily_chance_of_rain']}% chance that it will rain tomorrow. The total amount of precipitation 
-        tomorrow is going to be around {current_weather_data['next_day_totalprecip_in']} inches. The average humidity for tomorrow will be 
-        {current_weather_data['next_day_daily_avghumidity']}%. The conditions for tomorrow are {current_weather_data['next_day_conditions']}. 
+        for tomorrow will be {current_weather_data['next_day_maxwind_mph']}MPH. The wind chill (or "feels like") for tomorrow will be
+        {current_weather_data['next_day_feelslike_f']} degrees Fahrenheit. As of now, there is a {current_weather_data['next_day_daily_chance_of_snow']}% 
+        chance that it will snow tomorrow. There is also a {current_weather_data['next_day_daily_chance_of_rain']}% chance that it will rain tomorrow. 
+        The total amount of precipitation tomorrow is going to be around {current_weather_data['next_day_totalprecip_in']} inches. The average humidity 
+        for tomorrow will be {current_weather_data['next_day_daily_avghumidity']}%. The conditions for tomorrow are {current_weather_data['next_day_conditions']}. 
         '''
         print(message)
         message = message.replace("\n", "\\n")

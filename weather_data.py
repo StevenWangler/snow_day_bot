@@ -20,6 +20,7 @@ def get_relevant_weather_information(forecast_data):
         weather_data['current_day_daily_chance_of_snow'] = current_day['daily_chance_of_snow']
         weather_data['current_day_daily_chance_of_rain'] = current_day['daily_chance_of_rain']
         weather_data['current_day_daily_avghumidity'] = current_day['avghumidity']
+        weather_data['current_day_feelslike_f'] = forecast_data['current']['feelslike_f']
         weather_data['current_day_conditions'] = current_day['condition']['text']
 
         # Next day forecast information
@@ -32,6 +33,8 @@ def get_relevant_weather_information(forecast_data):
         weather_data['next_day_daily_chance_of_rain'] = next_day['daily_chance_of_rain']
         weather_data['next_day_daily_avghumidity'] = next_day['avghumidity']
         weather_data['next_day_conditions'] = next_day['condition']['text']
+        weather_data['next_day_feelslike_f'] = forecast_data['forecast']['forecastday'][1]['hour'][6]['feelslike_f']
+
     except KeyError as ex:
         print(f"Error: {ex} not found in forecast_data")
 
