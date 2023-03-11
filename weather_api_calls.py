@@ -1,5 +1,5 @@
 '''
-Add a description later
+This file contains calls to the weather api
 '''
 import requests
 import settings
@@ -7,7 +7,8 @@ import settings
 
 def get_forecast():
     '''
-    THIS IS A TEST
+    This function gets the weather forecast for the current day and
+    the next day. It is also gathering weather alerts.
     '''
     try:
         url = (f'{settings.WEATHER_API_BASE}'
