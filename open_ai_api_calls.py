@@ -5,7 +5,6 @@ import json
 import requests
 import settings
 
-
 def generate_chat_completion(message):
     '''
     This method calls the chat completion endpoint from openai

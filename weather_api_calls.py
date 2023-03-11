@@ -4,7 +4,6 @@ This file contains calls to the weather api
 import requests
 import settings
 
-
 def get_forecast():
     '''
     This function gets the weather forecast for the current day and
