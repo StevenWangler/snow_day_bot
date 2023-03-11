@@ -35,6 +35,7 @@ def create_open_ai_message(current_weather_data):
         tomorrow is going to be around {current_weather_data['next_day_totalprecip_in']} inches. The average humidity for tomorrow will be 
         {current_weather_data['next_day_daily_avghumidity']}%. The conditions for tomorrow are {current_weather_data['next_day_conditions']}. 
         '''
+        print(message)
         message = message.replace("\n", "\\n")
         message_object = json.loads(f'[{{"role": "user", "content": "{message}"}}]')
     except KeyError as ex:
