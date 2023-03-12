@@ -9,7 +9,6 @@ import json
 import settings
 import open_ai_api_calls as openai
 
-
 def create_open_ai_snow_day_caption(current_weather_data, snow_day_policy):
     '''
     this method is used to create the json message we are
@@ -45,7 +44,8 @@ def create_open_ai_snow_day_caption(current_weather_data, snow_day_policy):
         '''
         message = message.replace("\n", "\\n")
         message = message.strip()
-        message_object = json.loads(json.dumps([{"role": "user", "content": message}]))
+        message_object = json.loads(json.dumps(
+            [{"role": "user", "content": message}]))
     except KeyError as ex:
         print(f"An error occurred while creating message: {str(ex)}")
         message_object = None
@@ -53,11 +53,22 @@ def create_open_ai_snow_day_caption(current_weather_data, snow_day_policy):
     return message_object
 
 
-def create_open_ai_image_prompt():
+def create_open_ai_instagram_image_prompt():
     '''
     this method comes up with a prompt to generate our image from
     '''
-    
-    message = 
-    openai.generate_chat_completion()
-
+    try:
+        message = f'''
+        Response with only a prompt for an image generation. Please use the following items in
+        your prompt: {settings.SCHOOL_MASCOT}, {settings.SCHOOL_COLORS}.In addition, try to 
+        incorporate snow in your prompt as well. Please specify the style of the image you want
+        to create as well (i.e. pencil drawing)
+        '''
+        message = message.replace("\n", "\\n")
+        message = message.strip()
+        message_object = json.loads(json.dumps(
+            [{"role": "user", "content": message}]))
+        return openai.generate_chat_completion(message_object)
+    except Exception as ex:
+        print(f'An error occurred whole creating the image prompt. Error: {str(ex)}')
+        return None

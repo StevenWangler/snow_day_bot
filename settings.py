@@ -6,7 +6,7 @@ import os
 
 # General data
 SCHOOL_NAME = 'Rockford Public Schools'
-SCHOOL_COLORS = 'orange and black'
+SCHOOL_COLORS = 'Orange and black'
 SCHOOL_MASCOT = 'Ram'
 
 # Weather API data
@@ -29,7 +29,3 @@ ENGINE_LOGIT_BIAS = None
 ENGINE_USER = None
 CHAT_COMPLETIONS_URL = 'https://api.openai.com/v1/chat/completions'
 IMAGE_GENERATION_URL = 'https://api.openai.com/v1/images/generations'
-
-# Image generation data
-IMAGE_STYLES = ['cartoon', 'painting', 'drawing', 'realistic', 'pencil']
-

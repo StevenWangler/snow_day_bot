@@ -6,7 +6,8 @@ import requests
 import openai
 import settings
 
-def generate_chat_completion(message):
+
+def generate_chat_completion(json_message):
     '''
     This method calls the chat completion endpoint from openai
     '''
@@ -18,15 +19,15 @@ def generate_chat_completion(message):
         }
         data = {
             'model': settings.ENGINE_NAME,
-            'messages': message,
+            'messages': json_message,
         }
         response = requests.post(url,
-                headers=headers,
-                data=json.dumps(data),
-                timeout=30)            
+                                 headers=headers,
+                                 data=json.dumps(data),
+                                 timeout=30)
         response_data = json.loads(response.text)
         return response_data['choices'][0]['message']['content']
-        
+
     except (requests.exceptions.RequestException, json.JSONDecodeError) as ex:
         print(
             f"An error occurred while calling the OpenAI chat completion endpoint: {ex}")
@@ -39,11 +40,10 @@ def generate_image(image_prompt):
     '''
     try:
         response = openai.Image.create(
-            prompt = image_prompt,
-            n = 1,
-            size = "1024x1024",
-            response_format = 'b64_json'
-            )
+                                prompt=image_prompt,
+                                n=1,
+                                size="1024x1024",
+                                response_format='b64_json')
         return response['data'][0]['b64_json']
     except (requests.exceptions.RequestException, json.JSONDecodeError) as ex:
         print(

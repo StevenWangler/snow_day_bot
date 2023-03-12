@@ -16,7 +16,9 @@ def main():
     message = open_ai_data.create_open_ai_snow_day_caption(weather_data.get_relevant_weather_information(weather_api.get_forecast()), snow_day_policy)
     caption = open_ai.generate_chat_completion(message)
     print(caption)
-    open_ai.generate_image()
+    image_prompt = open_ai_data.create_open_ai_instagram_image_prompt()
+    #image_b_64 = open_ai.generate_image(image_prompt)
+    
 
 
 if __name__ == "__main__":
