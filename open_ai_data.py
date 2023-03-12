@@ -9,7 +9,7 @@ import json
 import settings
 import open_ai_api_calls as openai
 
-def create_open_ai_snow_day_caption(current_weather_data, snow_day_policy):
+def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
     '''
     this method is used to create the json message we are
     going to send to the open ai engine
@@ -18,7 +18,8 @@ def create_open_ai_snow_day_caption(current_weather_data, snow_day_policy):
         message = f'''
         Respond with a percentage chance that a snow day will occur tomorrow. Also, provide a one to three sentence
         explanation of how you came to that conclusion. Also, make this response in a tone of a high school student who uses
-        cool language. The schools name is {settings.SCHOOL_NAME}, so use that name when creating your response.
+        cool language. The schools name is {settings.SCHOOL_NAME}, so use that name when creating your response. also, do it in 160
+        characters or less. This is a hard limit - do not exceed 160 characters.
         
         Below you will find the weather conditions.
 
@@ -53,7 +54,7 @@ def create_open_ai_snow_day_caption(current_weather_data, snow_day_policy):
     return message_object
 
 
-def create_open_ai_instagram_image_prompt():
+def create_open_ai_image_prompt():
     '''
     this method comes up with a prompt to generate our image from
     '''

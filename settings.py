@@ -29,3 +29,14 @@ ENGINE_LOGIT_BIAS = None
 ENGINE_USER = None
 CHAT_COMPLETIONS_URL = 'https://api.openai.com/v1/chat/completions'
 IMAGE_GENERATION_URL = 'https://api.openai.com/v1/images/generations'
+
+# Communication data
+SMTP_SERVER = 'smtp.gmail.com'
+SMTP_PORT = 587
+SENDER_EMAIL = os.environ['SNOW_DAY_SENDER_EMAIL']
+SENDER_EMAIL_PASSWORD = os.environ['SNOW_DAY_SENDER_PASSWORD']
+VERIZON_DOMAIN = '@vtext.com'
+ATT_DOMAIN = '@txt.att.net'
+TMOBILE_DOMAIN = '@tmomail.net'
+SPRINT_DOMAIN = '@messaging.sprintpcs.com'
+

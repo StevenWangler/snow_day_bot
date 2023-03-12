@@ -6,6 +6,8 @@ import weather_data
 import open_ai_api_calls as open_ai
 import open_ai_data
 import general_functions
+import communication_functions
+
 
 def main():
     '''
@@ -13,12 +15,10 @@ def main():
     of the application.
     '''
     snow_day_policy = general_functions.get_snow_day_policy()
-    message = open_ai_data.create_open_ai_snow_day_caption(weather_data.get_relevant_weather_information(weather_api.get_forecast()), snow_day_policy)
-    caption = open_ai.generate_chat_completion(message)
-    print(caption)
-    image_prompt = open_ai_data.create_open_ai_instagram_image_prompt()
-    #image_b_64 = open_ai.generate_image(image_prompt)
-    
+    message = open_ai_data.create_open_ai_snow_day_message(weather_data.get_relevant_weather_information(weather_api.get_forecast()), snow_day_policy)
+    text_message = open_ai.generate_chat_completion(message)
+    print(text_message)
+    communication_functions.send_text_message('test@vtext.com', text_message)
 
 
 if __name__ == "__main__":
