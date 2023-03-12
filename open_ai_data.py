@@ -6,7 +6,8 @@ information and the more context that is provided, the more accurate of an answe
 we can get back from the model.
 '''
 import json
-import datetime
+import settings
+import open_ai_api_calls as openai
 
 
 def create_open_ai_snow_day_caption(current_weather_data, snow_day_policy):
@@ -16,9 +17,11 @@ def create_open_ai_snow_day_caption(current_weather_data, snow_day_policy):
     '''
     try:
         message = f'''
-        Respond with a percentage chance that a snowday will occur tomorrow. Also, provide a one to three sentence
-        explanation of how you came to that conclusion. If tomorrow is Saturday or Sunday, return (0%). The current day of the week
-        is {datetime.datetime.now().strftime("%A")}. Below you will find the weather conditions.
+        Respond with a percentage chance that a snow day will occur tomorrow. Also, provide a one to three sentence
+        explanation of how you came to that conclusion. Also, make this response in a tone of a high school student who uses
+        cool language. The schools name is {settings.SCHOOL_NAME}, so use that name when creating your response.
+        
+        Below you will find the weather conditions.
 
         The minimum temperature for the day will be {current_weather_data['current_day_mintemp_f']} degrees Fahrenheit, with
         a maximum temperature of {current_weather_data['current_day_maxtemp_f']} degrees Fahrenheit. The maximum wind speed
@@ -37,13 +40,24 @@ def create_open_ai_snow_day_caption(current_weather_data, snow_day_policy):
         for tomorrow will be {current_weather_data['next_day_daily_avghumidity']}%. The conditions for tomorrow are {current_weather_data['next_day_conditions']}.
 
         Here is some information about the schools snow day policy:
-        {snow_day_policy}  
+
+        {snow_day_policy}
         '''
         message = message.replace("\n", "\\n")
         message = message.strip()
-        message_object = json.loads(f'[{{"role": "user", "content": "{message}"}}]')
+        message_object = json.loads(json.dumps([{"role": "user", "content": message}]))
     except KeyError as ex:
         print(f"An error occurred while creating message: {str(ex)}")
         message_object = None
 
     return message_object
+
+
+def create_open_ai_image_prompt():
+    '''
+    this method comes up with a prompt to generate our image from
+    '''
+    
+    message = 
+    openai.generate_chat_completion()
+

@@ -4,6 +4,11 @@ talk to API's, etc.
 '''
 import os
 
+# General data
+SCHOOL_NAME = 'Rockford Public Schools'
+SCHOOL_COLORS = 'orange and black'
+SCHOOL_MASCOT = 'Ram'
+
 # Weather API data
 WEATHER_API_KEY = os.environ['WEATHERAPI_KEY']
 ZIP_CODE = '49341'
@@ -23,3 +28,8 @@ ENGINE_FREQUENCY_PENALTY = 0
 ENGINE_LOGIT_BIAS = None
 ENGINE_USER = None
 CHAT_COMPLETIONS_URL = 'https://api.openai.com/v1/chat/completions'
+IMAGE_GENERATION_URL = 'https://api.openai.com/v1/images/generations'
+
+# Image generation data
+IMAGE_STYLES = ['cartoon', 'painting', 'drawing', 'realistic', 'pencil']
+
