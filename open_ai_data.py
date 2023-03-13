@@ -16,10 +16,9 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
     '''
     try:
         message = f'''
-        Respond with a percentage chance that a snow day will occur tomorrow. Also, provide a one to three sentence
+        Respond with a percentage chance that a snow day will occur tomorrow. Also, provide a one to two sentence
         explanation of how you came to that conclusion. Also, make this response in a tone of a high school student who uses
-        cool language. The schools name is {settings.SCHOOL_NAME}, so use that name when creating your response. also, do it in 160
-        characters or less. This is a hard limit - do not exceed 160 characters.
+        cool language and is super popular. The schools name is {settings.SCHOOL_NAME}, so use that name when creating your response.
         
         Below you will find the weather conditions.
 
