@@ -19,7 +19,8 @@ def main():
     text_message = open_ai.generate_chat_completion(message)
     print(text_message)
     chunked_text_message = general_functions.split_string(text_message)
-    communication_functions.send_text_message('6164982211@vtext.com', chunked_text_message)
+    communication_functions.send_text_message(
+        '6164982211@vtext.com', chunked_text_message)
 
 
 if __name__ == "__main__":

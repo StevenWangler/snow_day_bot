@@ -38,6 +38,10 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
         The total amount of precipitation tomorrow is going to be around {current_weather_data['next_day_totalprecip_in']} inches. The average humidity 
         for tomorrow will be {current_weather_data['next_day_daily_avghumidity']}%. The conditions for tomorrow are {current_weather_data['next_day_conditions']}.
 
+        Below you will find the current weather alert information:
+
+        
+
         Here is some information about the schools snow day policy:
 
         {snow_day_policy}
