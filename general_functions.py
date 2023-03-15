@@ -1,6 +1,8 @@
 '''
 this file contains general functions for the application.
 '''
+
+
 def get_snow_day_policy():
     '''
     this function reads the snow day policy text file
@@ -12,7 +14,7 @@ def get_snow_day_policy():
     return policy
 
 
-def split_string(full_text_message):
+def split_text_message(full_text_message):
     '''
     SMS only supports 160 characters per text message. Given our text will
     likely always be greater than 160 characters, we need to break this up
@@ -36,7 +38,7 @@ def add_page_numbers(text_chunks):
         page_counter = 1
         modified_chunks = []
         for chunk in text_chunks:
-            chunk = chunk.replace('\n','')
+            chunk = chunk.replace('\n', '')
             modified_chunk = chunk + f' ({page_counter}/{len(text_chunks)})'
             modified_chunks.append(modified_chunk)
             page_counter += 1
@@ -44,3 +46,27 @@ def add_page_numbers(text_chunks):
     except TypeError:
         print("Please provide a list of strings as input.")
 
+
+def get_user_phone_numbers():
+    '''
+    TEMP METHOD. Until we hook the app up to a database, we are going to read
+    our beta user information from a .txt file stored in the project. This is
+    included in the .gitignore.
+    '''
+    phone_numbers = {}
+    try:
+        with open('user_phone_numbers.txt', 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+
+        for line in lines:
+            line = line.strip()
+            if line:
+                number, domain = line.split(',')
+                phone_numbers[number.strip()] = domain.strip()
+
+    except FileNotFoundError:
+        print('Error: Could not find user_phone_numbers.txt file.')
+    except ValueError:
+        print('Error: Malformed user_phone_numbers.txt file.')
+
+    return phone_numbers
