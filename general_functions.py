@@ -42,9 +42,10 @@ def add_page_numbers(text_chunks):
             modified_chunk = chunk + f' ({page_counter}/{len(text_chunks)})'
             modified_chunks.append(modified_chunk)
             page_counter += 1
-        return modified_chunks
     except TypeError:
         print("Please provide a list of strings as input.")
+
+    return modified_chunks
 
 
 def get_user_phone_numbers():
@@ -53,16 +54,16 @@ def get_user_phone_numbers():
     our beta user information from a .txt file stored in the project. This is
     included in the .gitignore.
     '''
-    phone_numbers = {}
+    phone_numbers = []
     try:
-        with open('user_phone_numbers.txt', 'r', encoding='utf-8') as f:
-            lines = f.readlines()
+        with open('user_phone_numbers.txt', 'r', encoding='utf-8') as _f:
+            lines = _f.readlines()
 
         for line in lines:
             line = line.strip()
             if line:
                 number, domain = line.split(',')
-                phone_numbers[number.strip()] = domain.strip()
+                phone_numbers.append(f"{number.strip()} {domain.strip()}")
 
     except FileNotFoundError:
         print('Error: Could not find user_phone_numbers.txt file.')
