@@ -13,7 +13,8 @@ def configure_logging():
     logging.basicConfig(filename='application_log.log', level=logging.INFO,
                         format='%(asctime)s:%(levelname)s:%(message)s')
     current_time = datetime.datetime.now()
-    logging.info('---- APPLICATION START (current date/time is: %s) ----', current_time)
+    logging.info(
+        '---- APPLICATION START (current date/time is: %s) ----', current_time)
 
 
 def get_snow_day_policy():
@@ -87,7 +88,8 @@ def get_user_phone_numbers():
     our beta user information from a .txt file stored in the project. This is
     included in the .gitignore.
     '''
-    logging.info('Getting the phone numbers for the users. **NOTE** this is a temp method.')
+    logging.info(
+        'Getting the phone numbers for the users. **NOTE** this is a temp method.')
     phone_numbers = []
     try:
         with open('user_phone_numbers.txt', 'r', encoding='utf-8') as _f:
@@ -105,3 +107,11 @@ def get_user_phone_numbers():
         logging.error('Error: Malformed user_phone_numbers.txt file.')
 
     return phone_numbers
+
+
+def write_prediction_to_file(prediction):
+    '''
+    This file writes the given prediction to a text file as a record
+    '''
+    with open("historical_predictions.txt", "a", encoding="utf-8") as file:
+        file.write(f'{prediction}\n')

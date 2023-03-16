@@ -6,6 +6,7 @@ import logging
 import requests
 import openai
 import settings
+import general_functions
 
 
 def generate_chat_completion(json_message):
@@ -27,7 +28,7 @@ def generate_chat_completion(json_message):
                                  data=json.dumps(data),
                                  timeout=30)
         response_data = json.loads(response.text)
-        print(response_data['choices'][0]['message']['content'])
+        general_functions.write_prediction_to_file(response_data['choices'][0]['message']['content'])
         return response_data['choices'][0]['message']['content']
 
     except (requests.exceptions.RequestException, json.JSONDecodeError) as ex:

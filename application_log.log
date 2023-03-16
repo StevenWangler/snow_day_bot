@@ -199,3 +199,63 @@
 2023-03-16 15:21:49,570:INFO:Getting the phone numbers for the users. **NOTE** this is a temp method.
 2023-03-16 15:21:49,571:INFO:Sending our snowday prediction to 1 people
 2023-03-16 15:21:56,354:INFO:---- APPLICATION END ----
+2023-03-16 16:00:47,626:INFO:---- APPLICATION START (current date/time is: 2023-03-16 16:00:47.626427) ----
+2023-03-16 16:00:47,626:INFO:Application start!
+2023-03-16 16:00:47,626:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-16 16:00:47,997:INFO:Getting the relevant weather info from the forecast
+2023-03-16 16:00:47,997:INFO:Creating the request message to send to openai
+2023-03-16 16:00:50,687:INFO:Splitting the text message
+2023-03-16 16:00:50,687:INFO:Adding page numbers to the text messages
+2023-03-16 16:00:50,687:INFO:Getting the phone numbers for the users. **NOTE** this is a temp method.
+2023-03-16 16:00:50,689:INFO:Sending our snowday prediction to 1 people
+2023-03-16 16:00:55,947:INFO:---- APPLICATION END ----
+2023-03-16 16:08:10,001:INFO:---- APPLICATION START (current date/time is: 2023-03-16 16:08:10.001143) ----
+2023-03-16 16:08:10,001:INFO:Application start!
+2023-03-16 16:08:10,001:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-16 16:08:10,317:INFO:Getting the relevant weather info from the forecast
+2023-03-16 16:08:10,317:INFO:Creating the request message to send to openai
+2023-03-16 16:08:13,526:INFO:Splitting the text message
+2023-03-16 16:08:13,527:INFO:Adding page numbers to the text messages
+2023-03-16 16:08:13,527:INFO:Getting the phone numbers for the users. **NOTE** this is a temp method.
+2023-03-16 16:08:13,528:INFO:Sending our snowday prediction to 1 people
+2023-03-16 16:08:19,170:INFO:---- APPLICATION END ----
+2023-03-16 16:20:57,742:INFO:---- APPLICATION START (current date/time is: 2023-03-16 16:20:57.742701) ----
+2023-03-16 16:20:57,743:INFO:Application start!
+2023-03-16 16:20:57,743:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-16 16:20:58,036:INFO:Getting the relevant weather info from the forecast
+2023-03-16 16:20:58,037:INFO:Creating the request message to send to openai
+2023-03-16 16:21:00,885:INFO:Splitting the text message
+2023-03-16 16:21:00,886:INFO:Adding page numbers to the text messages
+2023-03-16 16:21:00,886:INFO:Getting the phone numbers for the users. **NOTE** this is a temp method.
+2023-03-16 16:21:00,887:INFO:Sending our snowday prediction to 1 people
+2023-03-16 16:21:06,375:INFO:---- APPLICATION END ----
+2023-03-16 16:30:47,439:INFO:---- APPLICATION START (current date/time is: 2023-03-16 16:30:47.439279) ----
+2023-03-16 16:30:47,439:INFO:Application start!
+2023-03-16 16:30:47,439:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-16 16:30:47,723:INFO:Getting the relevant weather info from the forecast
+2023-03-16 16:30:47,723:INFO:Creating the request message to send to openai
+2023-03-16 16:30:51,390:INFO:Splitting the text message
+2023-03-16 16:30:51,391:INFO:Adding page numbers to the text messages
+2023-03-16 16:30:51,391:INFO:Getting the phone numbers for the users. **NOTE** this is a temp method.
+2023-03-16 16:30:51,391:INFO:Sending our snowday prediction to 1 people
+2023-03-16 16:30:58,479:INFO:---- APPLICATION END ----
+2023-03-16 16:31:53,635:INFO:---- APPLICATION START (current date/time is: 2023-03-16 16:31:53.635344) ----
+2023-03-16 16:31:53,635:INFO:Application start!
+2023-03-16 16:31:53,635:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-16 16:31:53,705:INFO:Getting the relevant weather info from the forecast
+2023-03-16 16:31:53,705:INFO:Creating the request message to send to openai
+2023-03-16 16:31:57,729:INFO:Splitting the text message
+2023-03-16 16:31:57,729:INFO:Adding page numbers to the text messages
+2023-03-16 16:31:57,730:INFO:Getting the phone numbers for the users. **NOTE** this is a temp method.
+2023-03-16 16:31:57,730:INFO:Sending our snowday prediction to 1 people
+2023-03-16 16:32:06,255:INFO:---- APPLICATION END ----
+2023-03-16 16:33:32,570:INFO:---- APPLICATION START (current date/time is: 2023-03-16 16:33:32.570667) ----
+2023-03-16 16:33:32,570:INFO:Application start!
+2023-03-16 16:33:32,570:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-16 16:33:32,670:INFO:Getting the relevant weather info from the forecast
+2023-03-16 16:33:32,670:INFO:Creating the request message to send to openai
+2023-03-16 16:33:35,378:INFO:Splitting the text message
+2023-03-16 16:33:35,378:INFO:Adding page numbers to the text messages
+2023-03-16 16:33:35,378:INFO:Getting the phone numbers for the users. **NOTE** this is a temp method.
+2023-03-16 16:33:35,379:INFO:Sending our snowday prediction to 1 people
+2023-03-16 16:33:40,679:INFO:---- APPLICATION END ----

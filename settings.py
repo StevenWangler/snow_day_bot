@@ -13,7 +13,15 @@ AI_RESPONSE_THEMES = ['Cool high school student',
                       'Bugs bunny',
                       'Scooby-doo',
                       'Surfer dude',
-                      'First grader']
+                      'First grader',
+                      'Cowboy',
+                      'Superhero',
+                      'Mad scientist',
+                      'Mario',
+                      'Robot',
+                      'Hippie',
+                      'Caveman',
+                      'Detective']
 
 # Weather API data
 WEATHER_API_KEY = app_secrets.WEATHERAPI_KEY

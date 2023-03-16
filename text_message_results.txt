@@ -1,0 +1,13 @@
+This file is used to keep track of how successful the texts we are send are.
+Hopefully this data will help make the SMTP more reliable.
+
+*Success = text messages were sent in order*
+*Fail = text messages were sent out of order*
+
+---RESULTS---
+1) Success
+2) Fail
+3) Success
+4) Success
+5) Fail
+6) Success
