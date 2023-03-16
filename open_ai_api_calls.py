@@ -2,6 +2,7 @@
 This file contains different API calls to the openai engine
 '''
 import json
+import logging
 import requests
 import openai
 import settings
@@ -26,11 +27,11 @@ def generate_chat_completion(json_message):
                                  data=json.dumps(data),
                                  timeout=30)
         response_data = json.loads(response.text)
+        print(response_data['choices'][0]['message']['content'])
         return response_data['choices'][0]['message']['content']
 
     except (requests.exceptions.RequestException, json.JSONDecodeError) as ex:
-        print(
-            f"An error occurred while calling the OpenAI chat completion endpoint: {ex}")
+        logging.error('An error occurred while calling the OpenAI chat completion endpoint: %s', ex)
         return None
 
 
@@ -46,6 +47,5 @@ def generate_image(image_prompt):
                                 response_format='b64_json')
         return response['data'][0]['b64_json']
     except (requests.exceptions.RequestException, json.JSONDecodeError) as ex:
-        print(
-            f"An error occurred while calling the OpenAI chat completion endpoint: {ex}")
+        print('An error occurred while calling the OpenAI chat completion endpoint: %s',ex)
         return None

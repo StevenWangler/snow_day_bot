@@ -6,19 +6,22 @@ information and the more context that is provided, the more accurate of an answe
 we can get back from the model.
 '''
 import json
+import random
+import logging
 import settings
 import open_ai_api_calls as openai
+
 
 def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
     '''
     this method is used to create the json message we are
     going to send to the open ai engine
     '''
+    logging.info('Creating the request message to send to openai')
     try:
         message = f'''
-        Respond with a percentage chance that a snow day will occur tomorrow. Also, provide a one to two sentence
-        explanation of how you came to that conclusion. Also, make this response in a tone of a high school student who uses
-        cool language and is super popular. The schools name is {settings.SCHOOL_NAME}, so use that name when creating your response.
+        Respond with a percentage chance that a snow day will occur tomorrow for {settings.SCHOOL_NAME} Also, provide a one to two sentence
+        explanation of how you came to that conclusion. Please respond in the tone of {random.choice(settings.AI_RESPONSE_THEMES)}
         
         Below you will find the weather conditions.
 
@@ -38,10 +41,14 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
         The total amount of precipitation tomorrow is going to be around {current_weather_data['next_day_totalprecip_in']} inches. The average humidity 
         for tomorrow will be {current_weather_data['next_day_daily_avghumidity']}%. The conditions for tomorrow are {current_weather_data['next_day_conditions']}.
 
-        Below you will find the current weather alert information:
+        Below you will find the current weather alert information (if any):
 
+        Weather alert event: {current_weather_data['weather_alert_event'] if 'weather_alert_event' in current_weather_data else 'no data available'}
+        Weather alert event description: {current_weather_data['weather_alert_desc'] if 'weather_alert_desc' in current_weather_data else 'no data available'}
+        Weather alert severity: {current_weather_data['weather_alert_severity'] if 'weather_alert_severity' in current_weather_data else 'no data available'}
+        Weather alert certainty: {current_weather_data['weather_alert_certainty'] if 'weather_alert_certainty' in current_weather_data else 'no data available'}
+        Weather alert urgency: {current_weather_data['weather_alert_urgency'] if 'weather_alert_urgency' in current_weather_data else 'no data available'}
         
-
         Here is some information about the schools snow day policy:
 
         {snow_day_policy}
@@ -51,7 +58,7 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
         message_object = json.loads(json.dumps(
             [{"role": "user", "content": message}]))
     except KeyError as ex:
-        print(f"An error occurred while creating message: {str(ex)}")
+        logging.error('An error occurred while creating message: %s',str(ex))
         message_object = None
 
     return message_object
@@ -74,5 +81,5 @@ def create_open_ai_image_prompt():
             [{"role": "user", "content": message}]))
         return openai.generate_chat_completion(message_object)
     except Exception as ex:
-        print(f'An error occurred whole creating the image prompt. Error: {str(ex)}')
+        logging.error('An error occurred whole creating the image prompt. Error: %s', str(ex))
         return None

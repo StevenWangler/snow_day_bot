@@ -1,12 +1,26 @@
 '''
 this file contains general functions for the application.
 '''
+import logging
+import datetime
+import settings
+
+
+def configure_logging():
+    '''
+    This method configures our log file
+    '''
+    logging.basicConfig(filename='application_log.log', level=logging.INFO,
+                        format='%(asctime)s:%(levelname)s:%(message)s')
+    current_time = datetime.datetime.now()
+    logging.info('---- APPLICATION START (current date/time is: %s) ----', current_time)
 
 
 def get_snow_day_policy():
     '''
     this function reads the snow day policy text file
     '''
+    logging.info('Getting the snow day policy for: %s', settings.SCHOOL_NAME)
     policy = ''
     with open('snow_day_policy.txt', 'r', encoding='utf-8') as file:
         policy = file.read()
@@ -18,12 +32,30 @@ def split_text_message(full_text_message):
     '''
     SMS only supports 160 characters per text message. Given our text will
     likely always be greater than 160 characters, we need to break this up
-    to send in multiple text messages
+    to send in multiple text messages. There seems to be some other junk added
+    onto the messages when we send, so we're making the cutoff earlier, hence
+    the 130 characters. This function also splits on full words, which create
+    easier to read text messages.
     '''
+    logging.info('Splitting the text message')
     chunks = []
     while full_text_message:
-        chunks.append(full_text_message[:130])
-        full_text_message = full_text_message[130:]
+        if len(full_text_message) <= 130:
+            chunks.append(full_text_message)
+            break
+        if full_text_message[129] == ' ':
+            chunks.append(full_text_message[:130])
+            full_text_message = full_text_message[130:]
+        else:
+            i = 129
+            while i >= 0 and full_text_message[i] != ' ':
+                i -= 1
+            if i < 0:
+                chunks.append(full_text_message[:130])
+                full_text_message = full_text_message[130:]
+            else:
+                chunks.append(full_text_message[:i])
+                full_text_message = full_text_message[i+1:]
 
     modified_chunks = add_page_numbers(chunks)
     return modified_chunks
@@ -34,6 +66,7 @@ def add_page_numbers(text_chunks):
     This function will append page numbers to the end of each
     text chunk and return the modified array
     '''
+    logging.info('Adding page numbers to the text messages')
     try:
         page_counter = 1
         modified_chunks = []
@@ -43,7 +76,7 @@ def add_page_numbers(text_chunks):
             modified_chunks.append(modified_chunk)
             page_counter += 1
     except TypeError:
-        print("Please provide a list of strings as input.")
+        logging.error("Please provide a list of strings as input.")
 
     return modified_chunks
 
@@ -54,6 +87,7 @@ def get_user_phone_numbers():
     our beta user information from a .txt file stored in the project. This is
     included in the .gitignore.
     '''
+    logging.info('Getting the phone numbers for the users. **NOTE** this is a temp method.')
     phone_numbers = []
     try:
         with open('user_phone_numbers.txt', 'r', encoding='utf-8') as _f:
@@ -63,11 +97,11 @@ def get_user_phone_numbers():
             line = line.strip()
             if line:
                 number, domain = line.split(',')
-                phone_numbers.append(f"{number.strip()} {domain.strip()}")
+                phone_numbers.append(f"{number.strip()}{domain.strip()}")
 
     except FileNotFoundError:
-        print('Error: Could not find user_phone_numbers.txt file.')
+        logging.error('Error: Could not find user_phone_numbers.txt file.')
     except ValueError:
-        print('Error: Malformed user_phone_numbers.txt file.')
+        logging.error('Error: Malformed user_phone_numbers.txt file.')
 
     return phone_numbers

@@ -3,11 +3,13 @@ This file contains functions that parse through weather data.
 The weather data that we get will be used to pass to our ai engine to
 determine the percentage chance of a snowday.
 '''
+import logging
 
 def get_relevant_weather_information(forecast_data):
     '''
     This function gets the weather data we need to calculate a snow day.
     '''
+    logging.info('Getting the relevant weather info from the forecast')
     weather_data = {}
     try:
         # Current day forecast information
@@ -34,15 +36,16 @@ def get_relevant_weather_information(forecast_data):
         weather_data['next_day_conditions'] = next_day['condition']['text']
         weather_data['next_day_feelslike_f'] = forecast_data['forecast']['forecastday'][1]['hour'][6]['feelslike_f']
 
-        #Get any weather alerts
-        weather_alert_data = forecast_data['alerts']['alert'][0]
-        weather_data['weather_alert_event'] = weather_alert_data['event']
-        weather_data['weather_alert_severity'] = weather_alert_data['severity']
-        weather_data['weather_alert_certainty'] = weather_alert_data['certainty']
-        weather_data['weather_alert_urgency'] = weather_alert_data['urgency']
-        weather_data['weather_alert_desc'] = weather_alert_data['desc']
+        #Get any weather alerts if applicable
+        if len(forecast_data['alerts']['alert']) > 0:
+            weather_alert_data = forecast_data['alerts']['alert'][0]
+            weather_data['weather_alert_event'] = weather_alert_data['event']
+            weather_data['weather_alert_severity'] = weather_alert_data['severity']
+            weather_data['weather_alert_certainty'] = weather_alert_data['certainty']
+            weather_data['weather_alert_urgency'] = weather_alert_data['urgency']
+            weather_data['weather_alert_desc'] = weather_alert_data['desc']
 
     except KeyError as ex:
-        print(f"Error: {ex} not found in forecast_data")
+        logging.error('Not found in forecast_data. Error: %s', ex)
 
     return weather_data
