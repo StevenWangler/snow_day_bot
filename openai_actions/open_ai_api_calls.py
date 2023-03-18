@@ -5,8 +5,8 @@ import json
 import logging
 import requests
 import openai
-import settings
-import general_functions
+import settings.settings as settings
+import general_functions.general_functions as general_functions
 
 
 def generate_chat_completion(json_message):

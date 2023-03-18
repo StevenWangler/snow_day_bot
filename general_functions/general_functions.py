@@ -3,27 +3,28 @@ this file contains general functions for the application.
 '''
 import logging
 import datetime
-import settings
+import os
+import settings.settings as settings
 
 
 def configure_logging():
     '''
     This method configures our log file
     '''
-    logging.basicConfig(filename='application_log.log', level=logging.INFO,
-                        format='%(asctime)s:%(levelname)s:%(message)s')
+    log_file_path = os.path.join('settings', 'application_log.log')
+    logging.basicConfig(filename=log_file_path, level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
     current_time = datetime.datetime.now()
-    logging.info(
-        '---- APPLICATION START (current date/time is: %s) ----', current_time)
+    logging.info('---- APPLICATION START (current date/time is: %s) ----', current_time)
 
-
+    
 def get_snow_day_policy():
     '''
     this function reads the snow day policy text file
     '''
     logging.info('Getting the snow day policy for: %s', settings.SCHOOL_NAME)
     policy = ''
-    with open('snow_day_policy.txt', 'r', encoding='utf-8') as file:
+    file_path = os.path.join('settings', 'snow_day_policy.txt')
+    with open(file_path, 'r', encoding='utf-8') as file:
         policy = file.read()
 
     return policy
@@ -88,11 +89,11 @@ def get_user_phone_numbers():
     our beta user information from a .txt file stored in the project. This is
     included in the .gitignore.
     '''
-    logging.info(
-        'Getting the phone numbers for the users. **NOTE** this is a temp method.')
+    logging.info('Getting the phone numbers for the users. **NOTE** this is a temp method.')
     phone_numbers = []
     try:
-        with open('user_phone_numbers.txt', 'r', encoding='utf-8') as _f:
+        file_path = os.path.join('settings', 'user_phone_numbers.txt')
+        with open(file_path, 'r', encoding='utf-8') as _f:
             lines = _f.readlines()
 
         for line in lines:
@@ -113,5 +114,6 @@ def write_prediction_to_file(prediction):
     '''
     This file writes the given prediction to a text file as a record
     '''
-    with open("historical_predictions.txt", "a", encoding="utf-8") as file:
+    file_path = os.path.join('settings', 'historical_predictions.txt')
+    with open(file_path, "a", encoding="utf-8") as file:
         file.write(f'{prediction}\n')

@@ -2,7 +2,7 @@
 This is the settings file that contains information needed to run the application,
 talk to API's, etc.
 '''
-import app_secrets
+import settings.app_secrets as app_secrets
 
 # General data
 SCHOOL_NAME = 'Rockford Public Schools'

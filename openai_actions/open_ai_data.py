@@ -8,9 +8,8 @@ we can get back from the model.
 import json
 import random
 import logging
-import settings
-import open_ai_api_calls as openai
-
+import settings.settings as settings
+from openai_actions import open_ai_api_calls as openai
 
 def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
     '''
@@ -49,7 +48,7 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
         Weather alert certainty: {current_weather_data['weather_alert_certainty'] if 'weather_alert_certainty' in current_weather_data else 'no data available'}
         Weather alert urgency: {current_weather_data['weather_alert_urgency'] if 'weather_alert_urgency' in current_weather_data else 'no data available'}
         
-        Here is some information about the schools snow day policy:
+        Here is some information about the schools snow day policy and how snow days are decided:
 
         {snow_day_policy}
         '''
