@@ -2,31 +2,20 @@
 This is the settings file that contains information needed to run the application,
 talk to API's, etc.
 '''
-import settings.app_secrets as app_secrets
+from settings import app_secrets
 
-# General data
+# School data
 SCHOOL_NAME = 'Rockford Public Schools'
 SCHOOL_COLORS = 'Orange and black'
 SCHOOL_MASCOT = 'Ram'
-AI_RESPONSE_THEMES = ['Cool high school student',
-                      'Pirate', 
-                      'Bugs bunny',
-                      'Scooby-doo',
-                      'Surfer dude',
-                      'First grader',
-                      'Cowboy',
-                      'Superhero',
-                      'Mad scientist',
-                      'Mario',
-                      'Robot',
-                      'Hippie',
-                      'Caveman',
-                      'Detective']
+SCHOOL_DISTRICT_STATE = 'Michigan'
+
 
 # Weather API data
 WEATHER_API_KEY = app_secrets.WEATHERAPI_KEY
 ZIP_CODE = '49341'
 WEATHER_API_BASE = 'http://api.weatherapi.com/v1/'
+
 
 # OpenAI data
 OPENAI_API_KEY = app_secrets.OPENAI_API_KEY
@@ -43,6 +32,20 @@ ENGINE_LOGIT_BIAS = None
 ENGINE_USER = None
 CHAT_COMPLETIONS_URL = 'https://api.openai.com/v1/chat/completions'
 IMAGE_GENERATION_URL = 'https://api.openai.com/v1/images/generations'
+AI_RESPONSE_THEMES = ['Cool high school student',
+                      'Pirate', 
+                      'Bugs bunny',
+                      'Scooby-doo',
+                      'Surfer dude',
+                      'Cool middle school student',
+                      'Cowboy',
+                      'Mario',
+                      'Robot',
+                      'Hippie',
+                      'Caveman',
+                      'Motivational speaker',
+                      'Spongebob']
+
 
 # Communication data
 SMTP_SERVER = 'smtp.gmail.com'

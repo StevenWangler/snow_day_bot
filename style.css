@@ -1,0 +1,28 @@
+/* Highlight form inputs on focus */
+input[type="text"]:focus,
+input[type="email"]:focus {
+border-color: orange;
+}
+
+/* Remove highlighting from form inputs when not focused */
+input[type="text"],
+input[type="email"] {
+border-color: black;
+}
+
+/* Change navbar background color */
+.navbar {
+background-color: orange;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    text-align: center;
+  }
+  
+  

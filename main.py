@@ -15,14 +15,13 @@ def main():
     This function is the main entry point
     of the application.
     '''
-    logging.info('Application start!')
+    logging.info('---- APPLICATION START ----')
     snow_day_policy = general_functions.get_snow_day_policy()
     message = openai_data.create_open_ai_snow_day_message(weather_data.get_relevant_weather_information(weather_api.get_forecast()), snow_day_policy)
-    text_message = openai_api.generate_chat_completion(message)
-    chunked_text_message = general_functions.split_text_message(text_message)
+    email_message = openai_api.generate_chat_completion(message)
     #Below is a temp method - eventually, we will setup a database for this
-    phone_numbers = general_functions.get_user_phone_numbers()
-    email_delivery.send_text_messages_to_user(phone_numbers, chunked_text_message)
+    emails = general_functions.get_user_emails()
+    email_delivery.send_email_to_user(emails, email_message)
     logging.info('---- APPLICATION END ----')
 
 if __name__ == "__main__":

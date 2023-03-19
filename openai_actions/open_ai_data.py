@@ -8,7 +8,8 @@ we can get back from the model.
 import json
 import random
 import logging
-import settings.settings as settings
+import datetime
+from settings import settings
 from openai_actions import open_ai_api_calls as openai
 
 def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
@@ -19,10 +20,22 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
     logging.info('Creating the request message to send to openai')
     try:
         message = f'''
-        Respond with a percentage chance that a snow day will occur tomorrow for {settings.SCHOOL_NAME} Also, provide a one to two sentence
-        explanation of how you came to that conclusion. Please respond in the tone of {random.choice(settings.AI_RESPONSE_THEMES)}
+        Respond with a percentage chance that a snow day will occur tomorrow for {settings.SCHOOL_NAME}.
         
-        Below you will find the weather conditions.
+        Here are the rules I would like you to follow:
+
+        1) You must respond in the tone of {random.choice(settings.AI_RESPONSE_THEMES)}
+        2) Use the information below to make up your opinion
+        3) Provide a 3 to 4 sentence explanation of the percentage chance you came up with
+        4) Work your answer into the 1 - 2 sentences
+        5) Be logical and honest in your answer
+        6) If you don't think there is any chance, feel free to say just that there is a 0% chance.
+
+        Here is some additional information to consider:
+        1) The school is located in the state of {settings.SCHOOL_DISTRICT_STATE}
+        2) Take the current month into consideration, which is: {datetime.date.today().month}
+
+        Here are the current weather conditions for the school district area:
 
         The minimum temperature for the day will be {current_weather_data['current_day_mintemp_f']} degrees Fahrenheit, with
         a maximum temperature of {current_weather_data['current_day_maxtemp_f']} degrees Fahrenheit. The maximum wind speed
@@ -32,6 +45,8 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
         The total amount of precipitation today is going to be around {current_weather_data['current_day_totalprecip_in']} inches. The average humidity
         for today is {current_weather_data['current_day_daily_avghumidity']}%. The current day conditions are {current_weather_data['current_day_conditions']}.
 
+        Here are the weather conditions for tomorrow:
+
         Tomorrow, the minimum temperature for the day will be {current_weather_data['next_day_mintemp_f']} degrees Fahrenheit, with
         a maximum temperature of {current_weather_data['next_day_maxtemp_f']} degrees Fahrenheit. The maximum wind speed
         for tomorrow will be {current_weather_data['next_day_maxwind_mph']}MPH. The wind chill (or "feels like") for tomorrow will be
@@ -40,7 +55,7 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
         The total amount of precipitation tomorrow is going to be around {current_weather_data['next_day_totalprecip_in']} inches. The average humidity 
         for tomorrow will be {current_weather_data['next_day_daily_avghumidity']}%. The conditions for tomorrow are {current_weather_data['next_day_conditions']}.
 
-        Below you will find the current weather alert information (if any):
+        If there are any weather alerts or warnings, they are listed below:
 
         Weather alert event: {current_weather_data['weather_alert_event'] if 'weather_alert_event' in current_weather_data else 'no data available'}
         Weather alert event description: {current_weather_data['weather_alert_desc'] if 'weather_alert_desc' in current_weather_data else 'no data available'}
@@ -54,8 +69,7 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
         '''
         message = message.replace("\n", "\\n")
         message = message.strip()
-        message_object = json.loads(json.dumps(
-            [{"role": "user", "content": message}]))
+        message_object = json.loads(json.dumps([{"role": "user", "content": message}]))
     except KeyError as ex:
         logging.error('An error occurred while creating message: %s',str(ex))
         message_object = None
