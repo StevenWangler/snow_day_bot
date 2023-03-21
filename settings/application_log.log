@@ -906,3 +906,129 @@
 2023-03-19 12:52:35,930:INFO:Sending our snowday prediction to 1 people
 2023-03-19 12:52:37,108:INFO:Message delivered to wangler.steven@outlook.com
 2023-03-19 12:52:37,166:INFO:---- APPLICATION END ----
+2023-03-19 17:05:25,268:INFO:---- APPLICATION START (current date/time is: 2023-03-19 17:05:25.268592) ----
+2023-03-19 17:05:25,269:INFO:---- APPLICATION START ----
+2023-03-19 17:05:25,269:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-19 17:05:25,544:INFO:Getting the relevant weather info from the forecast
+2023-03-19 17:05:25,545:INFO:Creating the request message to send to openai
+2023-03-19 17:05:31,134:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-19 17:05:31,135:INFO:Sending our snowday prediction to 1 people
+2023-03-19 17:05:32,538:INFO:Message delivered to wangler.steven@outlook.com
+2023-03-19 17:05:32,572:INFO:---- APPLICATION END ----
+2023-03-19 22:41:31,746:INFO:---- APPLICATION START (current date/time is: 2023-03-19 22:41:31.746122) ----
+2023-03-19 22:41:31,746:INFO:---- APPLICATION START ----
+2023-03-19 22:41:31,746:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-19 22:41:32,036:INFO:Getting the relevant weather info from the forecast
+2023-03-19 22:41:32,036:INFO:Creating the request message to send to openai
+2023-03-19 22:41:39,652:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-19 22:41:39,653:INFO:Sending our snowday prediction to 1 people
+2023-03-19 22:41:40,909:INFO:Message delivered to wangler.steven@outlook.com
+2023-03-19 22:41:40,951:INFO:---- APPLICATION END ----
+2023-03-20 08:45:07,512:INFO:---- APPLICATION START (current date/time is: 2023-03-20 08:45:07.512773) ----
+2023-03-20 08:45:07,513:INFO:---- APPLICATION START ----
+2023-03-20 08:45:07,513:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 08:45:07,785:INFO:Getting the relevant weather info from the forecast
+2023-03-20 08:45:07,786:INFO:Creating the request message to send to openai
+2023-03-20 08:45:32,740:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 08:45:32,741:INFO:Sending our snowday prediction to 1 people
+2023-03-20 08:45:34,142:INFO:Message delivered to wangler.steven@outlook.com
+2023-03-20 08:45:34,177:INFO:---- APPLICATION END ----
+2023-03-20 09:00:18,654:INFO:---- APPLICATION START (current date/time is: 2023-03-20 09:00:18.654829) ----
+2023-03-20 09:00:18,655:INFO:---- APPLICATION START ----
+2023-03-20 09:00:18,655:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 09:00:18,939:INFO:Getting the relevant weather info from the forecast
+2023-03-20 09:00:18,939:INFO:Creating the request message to send to openai
+2023-03-20 09:00:49,141:ERROR:An error occurred while calling the OpenAI chat completion endpoint: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=30)
+2023-03-20 09:00:49,142:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 09:01:22,796:INFO:---- APPLICATION START (current date/time is: 2023-03-20 09:01:22.796366) ----
+2023-03-20 09:01:22,796:INFO:---- APPLICATION START ----
+2023-03-20 09:01:22,796:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 09:01:22,898:INFO:Getting the relevant weather info from the forecast
+2023-03-20 09:01:22,898:INFO:Creating the request message to send to openai
+2023-03-20 09:01:27,358:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 09:04:22,699:INFO:---- APPLICATION START (current date/time is: 2023-03-20 09:04:22.699663) ----
+2023-03-20 09:04:22,700:INFO:---- APPLICATION START ----
+2023-03-20 09:04:22,700:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 09:04:22,978:INFO:Getting the relevant weather info from the forecast
+2023-03-20 09:04:22,979:INFO:Creating the request message to send to openai
+2023-03-20 09:04:53,526:ERROR:An error occurred while calling the OpenAI chat completion endpoint: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=30)
+2023-03-20 09:04:53,527:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 09:04:59,039:INFO:---- APPLICATION START (current date/time is: 2023-03-20 09:04:59.039735) ----
+2023-03-20 09:04:59,040:INFO:---- APPLICATION START ----
+2023-03-20 09:04:59,040:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 09:04:59,097:INFO:Getting the relevant weather info from the forecast
+2023-03-20 09:04:59,097:INFO:Creating the request message to send to openai
+2023-03-20 09:05:29,253:ERROR:An error occurred while calling the OpenAI chat completion endpoint: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=30)
+2023-03-20 09:05:29,254:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 09:05:40,041:INFO:---- APPLICATION START (current date/time is: 2023-03-20 09:05:40.041561) ----
+2023-03-20 09:05:40,041:INFO:---- APPLICATION START ----
+2023-03-20 09:05:40,041:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 09:05:40,124:INFO:Getting the relevant weather info from the forecast
+2023-03-20 09:05:40,124:INFO:Creating the request message to send to openai
+2023-03-20 09:05:45,734:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 09:05:45,734:INFO:Sending our snowday prediction to 1 people
+2023-03-20 09:05:47,867:INFO:Message delivered to wangler.steven@outlook.com
+2023-03-20 09:05:47,905:INFO:---- APPLICATION END ----
+2023-03-20 09:06:23,180:INFO:---- APPLICATION START (current date/time is: 2023-03-20 09:06:23.180292) ----
+2023-03-20 09:06:23,181:INFO:---- APPLICATION START ----
+2023-03-20 09:06:23,181:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 09:06:23,260:INFO:Getting the relevant weather info from the forecast
+2023-03-20 09:06:23,260:INFO:Creating the request message to send to openai
+2023-03-20 09:06:53,396:ERROR:An error occurred while calling the OpenAI chat completion endpoint: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=30)
+2023-03-20 09:06:53,398:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 09:46:23,570:INFO:---- APPLICATION START (current date/time is: 2023-03-20 09:46:23.570887) ----
+2023-03-20 09:46:23,571:INFO:---- APPLICATION START ----
+2023-03-20 09:46:23,571:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 09:46:23,768:INFO:Getting the relevant weather info from the forecast
+2023-03-20 09:46:23,769:INFO:Creating the request message to send to openai
+2023-03-20 09:46:38,075:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 09:47:20,147:INFO:---- APPLICATION START (current date/time is: 2023-03-20 09:47:20.147189) ----
+2023-03-20 09:47:20,147:INFO:---- APPLICATION START ----
+2023-03-20 09:47:20,147:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 09:47:20,248:INFO:Getting the relevant weather info from the forecast
+2023-03-20 09:47:20,249:INFO:Creating the request message to send to openai
+2023-03-20 09:47:56,152:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 09:48:01,181:INFO:Sending our snowday prediction to 1 people
+2023-03-20 09:48:10,576:INFO:Message delivered to wangler.steven@outlook.com
+2023-03-20 09:48:10,615:INFO:---- APPLICATION END ----
+2023-03-20 09:49:54,104:INFO:---- APPLICATION START (current date/time is: 2023-03-20 09:49:54.104625) ----
+2023-03-20 09:49:54,105:INFO:---- APPLICATION START ----
+2023-03-20 09:49:54,105:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 09:49:54,391:INFO:Getting the relevant weather info from the forecast
+2023-03-20 09:49:54,392:INFO:Creating the request message to send to openai
+2023-03-20 09:51:05,610:INFO:---- APPLICATION START (current date/time is: 2023-03-20 09:51:05.610805) ----
+2023-03-20 09:51:05,611:INFO:---- APPLICATION START ----
+2023-03-20 09:51:05,611:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 09:51:05,717:INFO:Getting the relevant weather info from the forecast
+2023-03-20 09:51:05,717:INFO:Creating the request message to send to openai
+2023-03-20 09:51:39,022:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 09:51:43,526:INFO:Sending our snowday prediction to 1 people
+2023-03-20 09:51:44,804:INFO:Message delivered to wangler.steven@outlook.com
+2023-03-20 09:51:44,842:INFO:---- APPLICATION END ----
+2023-03-20 18:07:09,521:INFO:---- APPLICATION START (current date/time is: 2023-03-20 18:07:09.521556) ----
+2023-03-20 18:07:09,522:INFO:---- APPLICATION START ----
+2023-03-20 18:07:09,522:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-20 18:07:09,797:INFO:Getting the relevant weather info from the forecast
+2023-03-20 18:07:09,797:INFO:Creating the request message to send to openai
+2023-03-20 18:07:19,562:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-20 18:07:19,563:INFO:Sending our snowday prediction to 1 people
+2023-03-20 18:07:21,778:INFO:Message delivered to wangler.steven@outlook.com
+2023-03-20 18:07:21,814:INFO:---- APPLICATION END ----
+2023-03-21 09:05:56,796:INFO:---- APPLICATION START (current date/time is: 2023-03-21 09:05:56.796820) ----
+2023-03-21 09:05:56,797:INFO:---- APPLICATION START ----
+2023-03-21 09:05:56,797:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-21 09:05:57,070:INFO:Getting the relevant weather info from the forecast
+2023-03-21 09:05:57,070:INFO:Creating the request message to send to openai
+2023-03-21 09:06:02,424:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-21 09:06:02,424:INFO:Sending our snowday prediction to 1 people
+2023-03-21 09:06:04,156:INFO:Message delivered to wangler.steven@outlook.com
+2023-03-21 09:06:04,204:INFO:---- APPLICATION END ----
+2023-03-21 14:46:24,999:INFO:---- APPLICATION START (current date/time is: 2023-03-21 14:46:24.999106) ----
+2023-03-21 14:46:24,999:INFO:---- APPLICATION START ----
+2023-03-21 14:46:24,999:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-03-21 14:46:25,268:INFO:Getting the relevant weather info from the forecast
+2023-03-21 14:46:25,268:INFO:Creating the request message to send to openai
+2023-03-21 14:46:30,712:INFO:Getting email addresses for the users. **NOTE** this is a temp method.
+2023-03-21 14:46:30,712:INFO:Sending our snowday prediction to 1 people
+2023-03-21 14:46:32,215:INFO:Message delivered to wangler.steven@outlook.com
+2023-03-21 14:46:32,254:INFO:---- APPLICATION END ----

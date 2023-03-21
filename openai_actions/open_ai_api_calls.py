@@ -29,8 +29,8 @@ def generate_chat_completion(json_message):
                                  timeout=30)
         response_data = json.loads(response.text)
         general_functions.write_prediction_to_file(response_data['choices'][0]['message']['content'])
-        return response_data['choices'][0]['message']['content']
-
+        completion_message = response_data['choices'][0]['message']['content']
+        return completion_message.replace('\n','')
     except (requests.exceptions.RequestException, json.JSONDecodeError) as ex:
         logging.error('An error occurred while calling the OpenAI chat completion endpoint: %s', ex)
         return None
