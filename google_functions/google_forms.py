@@ -24,7 +24,8 @@ def get_sign_up_responses():
                                 params=params, timeout=30)
         response.raise_for_status()  # Raise an exception if status code is not 200 OK
         return response.json()
-    except (requests.HTTPError, ConnectionError, requests.Timeout) as ex:
-        logging.error('An error occurred in get_sign_up_responses. Error: %s', ex)
+    except (requests.HTTPError, ConnectionError, requests.Timeout):
+        logging.error('An error occurred in get_sign_up_responses.')
         return None
+
     
