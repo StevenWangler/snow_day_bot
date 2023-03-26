@@ -1,2 +1,4 @@
 user_phone_numbers.txt
 app_secrets.py
+credentials.json
+client_secret.json

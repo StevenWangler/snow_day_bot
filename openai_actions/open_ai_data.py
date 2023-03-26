@@ -27,7 +27,7 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
         1) You must respond in the tone of {random.choice(settings.AI_RESPONSE_THEMES)}
         2) Use the information below to make up your opinion
         3) Provide a 3 to 4 sentence explanation of the percentage chance you came up with
-        4) Work your answer into the 1 - 2 sentences
+        4) Work your answer into the 3 - 4 sentences
         5) Be logical and honest in your answer
         6) If you don't think there is any chance, feel free to say just that there is a 0% chance.
 
