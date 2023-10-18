@@ -2,8 +2,7 @@
 This file contains calls to the weather api
 '''
 import requests
-import settings
-
+import settings.settings as settings
 
 def get_forecast():
     '''
