@@ -1,16 +1,22 @@
-'''
-This file takes weather data that has already been selected from an API call, puts it into a string,
-then will put it into a json object which can be used by the ai engine. Because this is a 
-linguistic mode, we need to build input as if we are physically speaking to someone. The more 
-information and the more context that is provided, the more accurate of an answer 
-we can get back from the model.
-'''
+"""
+OpenAI Message Creation Module
+
+This module prepares messages tailored for interaction with OpenAI's engine.
+It takes into account weather data, school settings, and linguistic models to craft
+messages that seek predictions about snow days, image generation prompts, and more.
+
+Dependencies:
+- json: For parsing and creating JSON payloads.
+- logging: To log application events and errors.
+- settings: To access application-specific settings.
+- openai_actions.open_ai_api_calls: To make calls to OpenAI's API.
+"""
+
 import json
 import random
 import logging
 import datetime
 from settings import settings
-from openai_actions import open_ai_api_calls as openai
 
 def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
     '''
@@ -76,23 +82,33 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
 
     return message_object
 
+def create_open_ai_prediction_check_message(prediction_message):
+    """
+    Generates a formatted message to check OpenAI's prediction about the chance of a snow day.
 
-def create_open_ai_image_prompt():
-    '''
-    this method comes up with a prompt to generate our image from
-    '''
+    Parameters:
+    - prediction_message (str): A message containing prediction details.
+
+    Returns:
+    - dict: A JSON-like dictionary object containing a formatted message for OpenAI's analysis.
+    
+    Raises:
+    - Exception: If any error occurs during message formatting or JSON conversion.
+
+    Note:
+    The response from OpenAI should be either "True" or "False", indicating if there's a greater
+    than 50% chance of a snow day.
+    """
     try:
         message = f'''
-        Response with only a prompt for an image generation. Please use the following items in
-        your prompt: {settings.SCHOOL_MASCOT}, {settings.SCHOOL_COLORS}.In addition, try to 
-        incorporate snow in your prompt as well. Please specify the style of the image you want
-        to create as well (i.e. pencil drawing)
+        Analyze the following message and respond with ONLY the word "True" or "False". Tell me
+        if there is a greater than 50% chance of a snow day. Here is the message:
+        {prediction_message}
         '''
         message = message.replace("\n", "\\n")
         message = message.strip()
-        message_object = json.loads(json.dumps(
-            [{"role": "user", "content": message}]))
-        return openai.generate_chat_completion(message_object)
+        message_object = json.loads(json.dumps([{"role": "user", "content": message}]))
+        return message_object
     except Exception as ex:
-        logging.error('An error occurred whole creating the image prompt. Error: %s', str(ex))
+        logging.error(f'There was an error in create_open_ai_prediction_check_message. Error: {ex}')
         return None

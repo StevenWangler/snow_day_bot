@@ -1,13 +1,24 @@
-'''
-This file holds functions that handle communication to the users
-'''
+"""
+Email Communication Module
+
+This module provides functionalities related to sending emails to users.
+It encapsulates the SMTP logic and provides a cleaner interface for email communication.
+
+Dependencies:
+- email.mime.text: To construct MIME text messages.
+- smtplib: To handle SMTP communication.
+- time: To introduce delays for retries.
+- socket: To handle socket-related errors.
+- logging: To log application events and errors.
+- settings.settings: To access application-specific settings.
+"""
+
 from email.mime.text import MIMEText
 import smtplib
 import time
 import socket
 import logging
-import settings.settings as settings
-
+from settings import settings
 
 def send_email_to_user(email_addresses, message):
     '''

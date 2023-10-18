@@ -3,4 +3,9 @@ app_secrets.py
 credentials.json
 client_secret.json
 user_emails.txt
+google_auth.py
+token.json
+application_log.log
+
+
 
