@@ -1,0 +1,26 @@
+name: Update Prediction
+
+on:
+  schedule:
+    # Runs at 00:00 UTC (7 PM EST) on Monday (for Sunday EST) to Friday (for Thursday EST)
+    - cron: '0 0 * * 1-5'
+  workflow_dispatch: # Allows manual triggering of the workflow.
+
+jobs:
+  update-prediction:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run prediction script
+      run: python main.py 
+
+    - name: Commit and push if changes
+      run: |
+        git config --global user.name 'StevenWangler'
+        git config --global user.email 'Wangler.Steven@outlook.com' # Replace with your GitHub email
+        git add prediction.txt
+        git commit -m "Update daily prediction" -a || echo "No changes to commit"
+        git push
