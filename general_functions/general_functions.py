@@ -42,7 +42,14 @@ def get_snow_day_policy():
 def write_prediction_to_file(prediction):
     """
     Records the provided prediction to a text file for historical tracking.
+    Writes to 'historical_predictions.txt' in the root directory of the project.
     """
-    file_path = os.path.join(BASE_SETTINGS_PATH, 'historical_predictions.txt')
-    with open(file_path, "a", encoding="utf-8") as file:
+    # Get the directory of the current script
+    current_directory = os.path.dirname(os.path.abspath(__file__))
+
+    # Go up one level to the root directory of the project
+    root_directory = os.path.dirname(current_directory)
+    file_path = os.path.join(root_directory, 'prediction.txt')
+
+    with open(file_path, "w", encoding="utf-8") as file:
         file.write(f'{prediction}\n')

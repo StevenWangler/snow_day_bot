@@ -45,15 +45,42 @@ def get_chat_completion_response(json_message):
 
 def generate_chat_response(json_message):
     """
-    Generates chat response using OpenAI's chat completion endpoint.
+    Generates a chat response using OpenAI's chat completion endpoint.
+    Validates the response and logs any exceptions encountered.
+
+    Parameters:
+    json_message (str): The JSON message to be sent to the chat completion endpoint.
+
+    Returns:
+    str or None: The chat response with newline characters removed, or None if an error occurs.
     """
     try:
-        logging.info('Generating the open ai chat completion message')
+        logging.info('Generating the OpenAI chat completion message')
         response = get_chat_completion_response(json_message)
-        response_data = json.loads(response.text)
-        general_functions.write_prediction_to_file(response_data['choices'][0]['message']['content'])
-        completion_message = response_data['choices'][0]['message']['content']
-        return completion_message.replace('\n', '')
+        response_data = parse_response(response)
+        chat_content = response_data.get('choices', [{}])[0].get('message', {}).get('content', '')
+        if chat_content.strip():
+            return chat_content.replace('\n', '')
+
+        logging.warning('Empty or invalid chat content received.')
+        return None
+
     except (requests.exceptions.RequestException, json.JSONDecodeError) as ex:
         logging.error('Error in generate_chat_response: %s', ex)
         return None
+
+def parse_response(response):
+    """
+    Parses the response from the chat completion endpoint.
+
+    Parameters:
+    response (Response): The response object from requests.
+
+    Returns:
+    dict: Parsed JSON data from the response.
+    """
+    try:
+        return json.loads(response.text)
+    except json.JSONDecodeError as ex:
+        logging.error('Error parsing JSON response: %s', ex)
+        return {}
