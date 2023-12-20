@@ -1,0 +1,76 @@
+html {
+    height: 100%;
+  }
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Black text for readability */
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+  nav {
+    background-color: #ff6600; /* Or any other color you're using */
+    color: white;
+    text-align: left; /* Align text to the left */
+    padding: 10px 20px; /* Added horizontal padding */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Align the list items inline */
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 15px; /* Adjust spacing between items */
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header {
+    background: #000000; /* Black */
+    color: white; /* White text */
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  main {
+    flex: 1 0 auto; /* Flex grow and shrink as needed, but don't let it be squeezed smaller */
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  #prediction {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #ff6600; /* Orange border */
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  footer {
+    background-color: #000000; /* Black */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
