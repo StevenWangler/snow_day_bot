@@ -5,7 +5,4 @@ client_secret.json
 user_emails.txt
 google_auth.py
 token.json
-application_log.log
-
-
-
+settings/application_log.log
