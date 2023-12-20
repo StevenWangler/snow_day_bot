@@ -12,9 +12,11 @@ Functions:
     - fetch_snow_day_policy(): Retrieves the policy related to snow days.
     - create_snow_day_message(policy): Generates a message indicating the possibility of a snow day.
     - generate_email_content(message): Prepares the content for the notification email.
-    - should_send_email(message): Determines if the conditions warrant sending out a snow day notification.
+    - should_send_email(message): Determines if the conditions warrant sending out a
+      snow day notification.
     - fetch_email_recipients(): Fetches email recipients based on the testing mode.
-    - fetch_email_recipients_for_testing(): Provides hard-coded email recipients for testing purposes.
+    - fetch_email_recipients_for_testing(): Provides hard-coded email recipients 
+      for testing purposes.
     - send_emails(recipients, message): Sends out the snow day notification emails.
 
 Dependencies:
@@ -37,9 +39,7 @@ from general_functions import general_functions
 from email_functions import email_delivery
 from google_functions import google_forms
 from settings import app_secrets
-
-# Global testing flag to toggle between testing and production modes
-TESTING = True # Set to False for production
+from settings import settings
 
 def main():
     """
@@ -53,6 +53,8 @@ def main():
         snow_day_policy = fetch_snow_day_policy()
         snowday_message = create_snow_day_message(snow_day_policy)
         email_message = generate_email_content(snowday_message)
+        #tODO!!!!!!
+        general_functions.write_prediction_to_file(email_message)
 
         if should_send_email(email_message):
             recipients = fetch_email_recipients()
@@ -60,12 +62,12 @@ def main():
         else:
             logging.info('There is a less than 50 percent chance of a snow day. Not sending emails.')
 
-            if TESTING:
+            if settings.TESTING_MODE:
                 # TESTING ONLY: Send email even if the snow day chance is low
                 recipients = fetch_email_recipients_for_testing()
                 send_emails(recipients, email_message)
     except Exception as e:
-        logging.error(f"An error occurred: {e}")
+        logging.error(f"An unexpected error occurred: {e}")
 
     logging.info('---- APPLICATION END ----')
 
@@ -129,7 +131,7 @@ def fetch_email_recipients():
     Returns:
         dict: A dictionary containing email addresses and associated names.
     """
-    if TESTING:
+    if settings.TESTING_MODE:
         return fetch_email_recipients_for_testing()
     else:
         return google_forms.get_sign_up_responses()

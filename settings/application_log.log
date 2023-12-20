@@ -1,23 +1,99 @@
-2023-10-17 23:33:26,540:INFO:---- APPLICATION START (current date/time is: 2023-10-17 23:33:26.540206) ----
-2023-10-17 23:33:26,540:INFO:---- APPLICATION START ----
-2023-10-17 23:33:26,540:INFO:Getting the snow day policy for: Rockford Public Schools
-2023-10-17 23:33:26,649:INFO:Getting the relevant weather info from the forecast
-2023-10-17 23:33:26,649:INFO:Creating the request message to send to openai
-2023-10-17 23:33:26,649:INFO:Generating the open ai chat completion message
-2023-10-17 23:33:37,497:INFO:Generating the open ai chat completion message
-2023-10-17 23:33:38,932:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
-2023-10-17 23:33:38,932:INFO:Sending our snowday prediction to 1 people
-2023-10-17 23:33:40,060:INFO:Message delivered to wangler.steven@outlook.com
-2023-10-17 23:33:40,103:INFO:---- APPLICATION END ----
-2023-10-17 23:48:05,380:INFO:---- APPLICATION START (current date/time is: 2023-10-17 23:48:05.380400) ----
-2023-10-17 23:48:05,380:INFO:---- APPLICATION START ----
-2023-10-17 23:48:05,380:INFO:Getting the snow day policy for: Rockford Public Schools
-2023-10-17 23:48:05,606:INFO:Getting the relevant weather info from the forecast
-2023-10-17 23:48:05,606:INFO:Creating the request message to send to openai
-2023-10-17 23:48:05,606:INFO:Generating the open ai chat completion message
-2023-10-17 23:48:20,502:INFO:Generating the open ai chat completion message
-2023-10-17 23:48:50,642:ERROR:Error in generate_chat_response: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=30)
-2023-10-17 23:48:50,643:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
-2023-10-17 23:48:50,643:INFO:Sending our snowday prediction to 1 people
-2023-10-17 23:48:52,068:INFO:Message delivered to wangler.steven@outlook.com
-2023-10-17 23:48:52,107:INFO:---- APPLICATION END ----
+2023-12-17 22:56:10,079:INFO:---- APPLICATION START (current date/time is: 2023-12-17 22:56:10.079744) ----
+2023-12-17 22:56:10,080:INFO:---- APPLICATION START ----
+2023-12-17 22:56:10,080:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-12-17 22:56:10,198:INFO:Getting the relevant weather info from the forecast
+2023-12-17 22:56:10,198:INFO:Creating the request message to send to openai
+2023-12-17 22:56:10,199:INFO:Generating the open ai chat completion message
+2023-12-17 22:56:20,065:INFO:Generating the open ai chat completion message
+2023-12-17 22:56:20,704:INFO:Fetching sign-up responses from Google Form.
+2023-12-17 22:56:21,114:INFO:Sending our snowday prediction to 21 people
+2023-12-17 22:56:23,621:INFO:Message delivered to wangler.steven@outlook.com
+2023-12-17 22:56:24,420:INFO:Message delivered to chelle_1943@yahoo.com
+2023-12-17 22:56:25,331:INFO:Message delivered to jessdaly922@gmail.com
+2023-12-17 22:56:26,195:INFO:Message delivered to annembartish@gmail.com
+2023-12-17 22:56:27,154:INFO:Message delivered to victoria.antuma@yahoo.com
+2023-12-17 22:56:28,222:INFO:Message delivered to tlynnegates@gmail.com
+2023-12-17 22:56:29,318:INFO:Message delivered to kmmanyen@gmail.com
+2023-12-17 22:56:30,184:INFO:Message delivered to dawnyg11@hotmail.com
+2023-12-17 22:56:31,165:INFO:Message delivered to nancy.mcphee@yahoo.com
+2023-12-17 22:56:32,101:INFO:Message delivered to jessica@rockfordportraits.com
+2023-12-17 22:56:32,871:INFO:Message delivered to circegoddess08@aol.com
+2023-12-17 22:56:33,741:INFO:Message delivered to ldeugaw@yahoo.com
+2023-12-17 22:56:34,734:INFO:Message delivered to natashalynnferguson@gmail.com
+2023-12-17 22:56:35,486:INFO:Message delivered to sehoorn@gmail.com
+2023-12-17 22:56:36,533:INFO:Message delivered to heidinsmith12@yahoo.com
+2023-12-17 22:56:37,138:INFO:Message delivered to kristengreen77@hotmail.com
+2023-12-17 22:56:37,861:INFO:Message delivered to cjtree123@gmail.com
+2023-12-17 22:56:38,551:INFO:Message delivered to kjulien@gmail.com
+2023-12-17 22:56:39,245:INFO:Message delivered to mlynn83@hotmail.com
+2023-12-17 22:56:40,260:INFO:Message delivered to betsylipzinski@gmail.com
+2023-12-17 22:56:41,190:INFO:Message delivered to michelelynn123@yahoo.com
+2023-12-17 22:56:41,225:INFO:---- APPLICATION END ----
+2023-12-18 18:35:15,119:INFO:---- APPLICATION START (current date/time is: 2023-12-18 18:35:15.119843) ----
+2023-12-18 18:35:15,120:INFO:---- APPLICATION START ----
+2023-12-18 18:35:15,120:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-12-18 18:35:15,424:INFO:Getting the relevant weather info from the forecast
+2023-12-18 18:35:15,425:INFO:Creating the request message to send to openai
+2023-12-18 18:35:15,425:INFO:Generating the open ai chat completion message
+2023-12-18 18:35:31,208:INFO:Generating the open ai chat completion message
+2023-12-18 18:35:31,896:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2023-12-18 18:35:45,286:INFO:Sending our snowday prediction to 1 people
+2023-12-18 18:35:46,731:INFO:Message delivered to wangler.steven@outlook.com
+2023-12-18 18:35:46,768:INFO:---- APPLICATION END ----
+2023-12-18 18:37:20,674:INFO:---- APPLICATION START (current date/time is: 2023-12-18 18:37:20.674342) ----
+2023-12-18 18:37:20,675:INFO:---- APPLICATION START ----
+2023-12-18 18:37:20,675:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-12-18 18:37:20,872:INFO:Getting the relevant weather info from the forecast
+2023-12-18 18:37:20,872:INFO:Creating the request message to send to openai
+2023-12-18 18:37:20,872:INFO:Generating the open ai chat completion message
+2023-12-18 18:37:28,928:INFO:Generating the open ai chat completion message
+2023-12-18 18:37:29,866:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2023-12-18 18:37:32,920:INFO:Sending our snowday prediction to 1 people
+2023-12-18 18:37:34,023:INFO:Message delivered to wangler.steven@outlook.com
+2023-12-18 18:37:34,058:INFO:---- APPLICATION END ----
+2023-12-19 18:44:02,053:INFO:---- APPLICATION START (current date/time is: 2023-12-19 18:44:02.053524) ----
+2023-12-19 18:44:02,054:INFO:---- APPLICATION START ----
+2023-12-19 18:44:02,054:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-12-19 18:44:02,349:INFO:Getting the relevant weather info from the forecast
+2023-12-19 18:44:02,349:INFO:Creating the request message to send to openai
+2023-12-19 18:44:02,351:INFO:Generating the OpenAI chat completion message
+2023-12-19 18:45:17,956:INFO:---- APPLICATION START (current date/time is: 2023-12-19 18:45:17.956202) ----
+2023-12-19 18:45:17,957:INFO:---- APPLICATION START ----
+2023-12-19 18:45:17,957:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-12-19 18:45:18,060:INFO:Getting the relevant weather info from the forecast
+2023-12-19 18:45:18,060:INFO:Creating the request message to send to openai
+2023-12-19 18:45:18,060:INFO:Generating the OpenAI chat completion message
+2023-12-19 19:48:56,156:INFO:---- APPLICATION START (current date/time is: 2023-12-19 19:48:56.156804) ----
+2023-12-19 19:48:56,157:INFO:---- APPLICATION START ----
+2023-12-19 19:48:56,157:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-12-19 19:48:56,380:INFO:Getting the relevant weather info from the forecast
+2023-12-19 19:48:56,381:INFO:Creating the request message to send to openai
+2023-12-19 19:48:56,381:INFO:Generating the OpenAI chat completion message
+2023-12-19 20:02:23,864:INFO:---- APPLICATION START (current date/time is: 2023-12-19 20:02:23.864672) ----
+2023-12-19 20:02:23,865:INFO:---- APPLICATION START ----
+2023-12-19 20:02:23,865:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-12-19 20:02:24,150:INFO:Getting the relevant weather info from the forecast
+2023-12-19 20:02:24,150:INFO:Creating the request message to send to openai
+2023-12-19 20:02:24,150:INFO:Generating the OpenAI chat completion message
+2023-12-19 20:02:36,412:INFO:Generating the OpenAI chat completion message
+2023-12-19 20:02:37,729:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2023-12-19 20:02:37,729:INFO:Sending our snowday prediction to 1 people
+2023-12-19 20:02:39,157:INFO:Message delivered to wangler.steven@outlook.com
+2023-12-19 20:02:39,202:INFO:---- APPLICATION END ----
+2023-12-19 20:03:19,913:INFO:---- APPLICATION START (current date/time is: 2023-12-19 20:03:19.913110) ----
+2023-12-19 20:03:19,914:INFO:---- APPLICATION START ----
+2023-12-19 20:03:19,914:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-12-19 20:03:19,978:INFO:Getting the relevant weather info from the forecast
+2023-12-19 20:03:19,978:INFO:Creating the request message to send to openai
+2023-12-19 20:03:19,978:INFO:Generating the OpenAI chat completion message
+2023-12-19 20:04:32,352:INFO:---- APPLICATION START (current date/time is: 2023-12-19 20:04:32.352362) ----
+2023-12-19 20:04:32,353:INFO:---- APPLICATION START ----
+2023-12-19 20:04:32,353:INFO:Getting the snow day policy for: Rockford Public Schools
+2023-12-19 20:04:32,439:INFO:Getting the relevant weather info from the forecast
+2023-12-19 20:04:32,439:INFO:Creating the request message to send to openai
+2023-12-19 20:04:32,439:INFO:Generating the OpenAI chat completion message
+2023-12-19 20:04:44,754:INFO:Generating the OpenAI chat completion message
+2023-12-19 20:04:45,623:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2023-12-19 20:04:45,624:INFO:Sending our snowday prediction to 1 people
+2023-12-19 20:04:46,995:INFO:Message delivered to wangler.steven@outlook.com
+2023-12-19 20:04:47,044:INFO:---- APPLICATION END ----

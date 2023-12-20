@@ -32,10 +32,10 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
 
         1) You must respond in the tone of {random.choice(settings.AI_RESPONSE_THEMES)}
         2) Use the information below to make up your opinion
-        3) Provide a 3 to 4 sentence explanation of the percentage chance you came up with
-        4) Work your answer into the 3 - 4 sentences
+        3) Provide a SHORT explanation of the percentage chance you came up with
+        4) Work your answer into the short explanation
         5) Be logical and honest in your answer
-        6) If you don't think there is any chance, feel free to say just that there is a 0% chance.
+        6) If you don't think there is any chance, just say that there is a 0% chance.
 
         Here is some additional information to consider:
         1) The school is located in the state of {settings.SCHOOL_DISTRICT_STATE}
@@ -61,7 +61,7 @@ def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
         The total amount of precipitation tomorrow is going to be around {current_weather_data['next_day_totalprecip_in']} inches. The average humidity 
         for tomorrow will be {current_weather_data['next_day_daily_avghumidity']}%. The conditions for tomorrow are {current_weather_data['next_day_conditions']}.
 
-        If there are any weather alerts or warnings, they are listed below:
+        If there are any weather alerts or warnings, they are listed below (MAKE SURE THE ALERTS ARE FOR KENT COUNTY (WHERE ROCKFORD IS):
 
         Weather alert event: {current_weather_data['weather_alert_event'] if 'weather_alert_event' in current_weather_data else 'no data available'}
         Weather alert event description: {current_weather_data['weather_alert_desc'] if 'weather_alert_desc' in current_weather_data else 'no data available'}
@@ -102,7 +102,7 @@ def create_open_ai_prediction_check_message(prediction_message):
     try:
         message = f'''
         Analyze the following message and respond with ONLY the word "True" or "False". Tell me
-        if there is a greater than 50% chance of a snow day. Here is the message:
+        if there is a greater than or equal to 50% chance of a snow day. Here is the message:
         {prediction_message}
         '''
         message = message.replace("\n", "\\n")
