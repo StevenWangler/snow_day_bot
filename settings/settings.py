@@ -2,7 +2,6 @@
 This is the settings file that contains information needed to run the application,
 talk to API's, etc.
 '''
-from settings import app_secrets
 
 # General settings
 TESTING_MODE = True
@@ -14,12 +13,10 @@ SCHOOL_MASCOT = 'Ram'
 SCHOOL_DISTRICT_STATE = 'Michigan'
 
 # Weather API data
-WEATHER_API_KEY = app_secrets.WEATHERAPI_KEY
 ZIP_CODE = '49341'
 WEATHER_API_BASE = 'http://api.weatherapi.com/v1/'
 
 # OpenAI data
-OPENAI_API_KEY = app_secrets.OPENAI_API_KEY
 ENGINE_NAME = 'gpt-4'
 ENGINE_TEMPERATURE = 1
 ENGINE_TOP_P = 1
@@ -40,8 +37,6 @@ AI_RESPONSE_THEMES = [
 # Communication data
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
-SENDER_EMAIL = app_secrets.SENDER_EMAIL
-SENDER_EMAIL_PASSWORD = app_secrets.SENDER_EMAIL_PASSWORD
 VERIZON_DOMAIN = '@vtext.com'
 ATT_DOMAIN = '@txt.att.net'
 TMOBILE_DOMAIN = '@tmomail.net'
