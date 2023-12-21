@@ -39,9 +39,11 @@ jobs:
       run: python main.py 
 
     - name: Commit and push if changes
+      env:
+        MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}  # Use your PAT secret name here
       run: |
         git config --global user.name 'StevenWangler'
-        git config --global user.email 'Wangler.Steven@outlook.com' # Replace with your GitHub email
+        git config --global user.email 'Wangler.Steven@outlook.com'
         git add prediction.txt
         git commit -m "Update daily prediction" -a || echo "No changes to commit"
-        git push
+        git push https://${{ env.MY_GITHUB_TOKEN }}@github.com/StevenWangler/snow_day_bot.git
