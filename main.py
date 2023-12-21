@@ -29,7 +29,8 @@ Dependencies:
 Note: 
     Before deploying to production, ensure the TESTING flag is set appropriately.
 """
-
+import os
+import json
 import logging
 import weatherapi.weather_api_calls as weather_api
 from weatherapi import weather_data
@@ -38,7 +39,6 @@ from openai_actions import open_ai_data as openai_data
 from general_functions import general_functions
 from email_functions import email_delivery
 from google_functions import google_forms
-from settings import app_secrets
 from settings import settings
 
 def main():
@@ -53,7 +53,6 @@ def main():
         snow_day_policy = fetch_snow_day_policy()
         snowday_message = create_snow_day_message(snow_day_policy)
         email_message = generate_email_content(snowday_message)
-        #tODO!!!!!!
         general_functions.write_prediction_to_file(email_message)
 
         if should_send_email(email_message):
@@ -143,8 +142,17 @@ def fetch_email_recipients_for_testing():
     Returns:
         dict: A dictionary containing email addresses and associated names.
     """
-    # Hardcoded email recipients for testing purposes
-    return app_secrets.PERSONAL_TESTING_EMAILS
+    # Fetching the email recipients from an environment variable
+    personal_testing_emails_str = os.environ.get('PERSONAL_TESTING_EMAILS', '{}')
+
+    # Convert the string to a dictionary
+    try:
+        personal_testing_emails = json.loads(personal_testing_emails_str)
+    except json.JSONDecodeError:
+        # In case of any error in decoding JSON, return an empty dictionary
+        personal_testing_emails = {}
+
+    return personal_testing_emails
 
 def send_emails(recipients, message):
     """
