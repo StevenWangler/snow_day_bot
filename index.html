@@ -18,15 +18,24 @@
     <h1>Blizzard</h1>
   </header>
 
-  <main>
-    <section id="predictor">
-      <h2>Your Snow Day Prediction</h2>
-      <div id="prediction">Loading prediction...</div>
-    </section>
-
+  <section id="predictor">
+    <h2 id="date-heading">Your Snow Day Prediction for </h2>
+    <div id="prediction">Loading prediction...</div>
+    
+    <div class="confidence-query">
+      <span>Are you confident in this prediction?</span>
+      <div class="button-container">
+        <button type="button" id="yesButton">Yes</button>
+        <button type="button" id="noButton">No</button>
+      </div>
+    </div>
+  </section>
+  
   <footer>
     <p>© 2023 Blizzard. All rights reserved.</p>
   </footer>
-  <script src="js/script.js"></script>
+
+  <script src="js/predictionLoader.js"></script>
+  <script src="js/dateLoader.js"></script>
 </body>
 </html>

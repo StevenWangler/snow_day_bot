@@ -28,7 +28,6 @@ import os.path
 import requests
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
-from settings import app_secrets
 
 GOOGLE_FORMS_API_BASE_URL = "https://forms.googleapis.com/v1/forms"
 
@@ -73,7 +72,7 @@ def get_sign_up_responses():
         else:
             raise ValueError("Invalid or missing credentials")
 
-    url = f"{GOOGLE_FORMS_API_BASE_URL}/{app_secrets.GOOGLE_SIGN_UP_FORM_ID}/responses"
+    url = f"{GOOGLE_FORMS_API_BASE_URL}/{os.environ.get('GOOGLE_SIGN_UP_FORM_ID')}/responses"
     headers = {
         'Authorization': f'Bearer {creds.token}',
         'Accept': 'application/json'
@@ -89,7 +88,7 @@ def get_sign_up_responses():
         for resp in responses:
             email_answer = resp.get('respondentEmail')
             # Using a placeholder for the key; replace with the actual key from your form
-            name_answer_key = '778b574a'  
+            name_answer_key = '778b574a'
             name_answer = resp.get('answers', {}).get(name_answer_key, {}).get('textAnswers', {}).get('answers', [{}])[0].get('value')
 
             if email_answer and name_answer:

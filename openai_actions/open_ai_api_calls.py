@@ -13,19 +13,11 @@ Dependencies:
 - settings.settings: To access application-specific settings.
 - general_functions.general_functions: Utility functions for the application.
 """
-
+import os
 import json
 import logging
 import requests
-import openai
 from settings import settings
-from general_functions import general_functions
-
-def _configure_openai_api():
-    """
-    Configures the OpenAI API with the provided API key.
-    """
-    openai.api_key = settings.OPENAI_API_KEY
 
 def get_chat_completion_response(json_message):
     """
@@ -34,7 +26,7 @@ def get_chat_completion_response(json_message):
     url = settings.CHAT_COMPLETIONS_URL
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': f'Bearer {settings.OPENAI_API_KEY}'
+        'Authorization': f'Bearer {os.environ.get("OPENAI_API_KEY")}'
     }
     data = {
         'model': settings.ENGINE_NAME,

@@ -13,6 +13,7 @@ Dependencies:
 - settings.settings: To access application-specific settings.
 """
 
+import os
 from email.mime.text import MIMEText
 import smtplib
 import time
@@ -26,7 +27,7 @@ def send_email_to_user(email_addresses, message):
     '''
     logging.info('Sending our snowday prediction to %s people', len(email_addresses))
     try:
-        username = settings.SENDER_EMAIL
+        username = os.environ.get('SENDER_EMAIL')
         smtp_connection = create_smtp_connection(username)
         for email in email_addresses:
             send_email(smtp_connection, message, email, email_addresses[email], username)
@@ -79,7 +80,7 @@ def create_smtp_connection(username):
     smtp_port = settings.SMTP_PORT
     smtp_connection = smtplib.SMTP(smtp_server, smtp_port)
     smtp_connection.starttls()
-    smtp_connection.login(username, settings.SENDER_EMAIL_PASSWORD)
+    smtp_connection.login(username, os.environ.get('SENDER_EMAIL_PASSWORD'))
     return smtp_connection
 
 
