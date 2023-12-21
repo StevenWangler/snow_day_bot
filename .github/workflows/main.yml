@@ -40,7 +40,7 @@ jobs:
 
     - name: Commit and push if changes
       env:
-        MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}  # Use your PAT secret name here
+        MY_GITHUB_TOKEN: ${{ secrets.GH_PAT }}
       run: |
         git config --global user.name 'StevenWangler'
         git config --global user.email 'Wangler.Steven@outlook.com'
