@@ -61,6 +61,8 @@ section {
   border: 2px solid #ff6600; /* Orange border */
   border-radius: 10px;
   background-color: white;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 footer {
@@ -103,7 +105,6 @@ footer {
   background-color: #000000; /* Darker shade on hover */
 }
 
-
-
-
-  
+.date {
+  margin-left: 50px;
+}
