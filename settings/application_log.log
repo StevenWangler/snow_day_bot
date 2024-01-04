@@ -1,12 +1,12 @@
-2024-01-04 01:15:45,475:INFO:---- APPLICATION START (current date/time is: 2024-01-04 01:15:45.475011) ----
-2024-01-04 01:15:45,475:INFO:---- APPLICATION START ----
-2024-01-04 01:15:45,475:INFO:Getting the snow day policy for: Rockford Public Schools
-2024-01-04 01:15:45,960:INFO:Getting the relevant weather info from the forecast
-2024-01-04 01:15:45,960:INFO:Creating the request message to send to openai
-2024-01-04 01:15:45,960:INFO:Generating the OpenAI chat completion message
-2024-01-04 01:15:53,858:INFO:Generating the OpenAI chat completion message
-2024-01-04 01:15:54,730:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
-2024-01-04 01:15:54,730:INFO:Application is in testing mode, sending the email anyways!
-2024-01-04 01:15:54,730:INFO:Testing users: {}
-2024-01-04 01:15:54,730:INFO:Sending our snowday prediction to 0 people
-2024-01-04 01:15:55,189:INFO:---- APPLICATION END ----
+2024-01-04 01:17:32,902:INFO:---- APPLICATION START (current date/time is: 2024-01-04 01:17:32.902647) ----
+2024-01-04 01:17:32,902:INFO:---- APPLICATION START ----
+2024-01-04 01:17:32,902:INFO:Getting the snow day policy for: Rockford Public Schools
+2024-01-04 01:17:32,973:INFO:Getting the relevant weather info from the forecast
+2024-01-04 01:17:32,973:INFO:Creating the request message to send to openai
+2024-01-04 01:17:32,973:INFO:Generating the OpenAI chat completion message
+2024-01-04 01:17:44,725:INFO:Generating the OpenAI chat completion message
+2024-01-04 01:17:45,479:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2024-01-04 01:17:45,480:INFO:Application is in testing mode, sending the email anyways!
+2024-01-04 01:17:45,480:INFO:Testing users: {}
+2024-01-04 01:17:45,480:INFO:Sending our snowday prediction to 0 people
+2024-01-04 01:17:45,918:INFO:---- APPLICATION END ----
