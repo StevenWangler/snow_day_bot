@@ -23,8 +23,15 @@ BASE_SETTINGS_PATH = os.path.join('settings')
 def configure_logging():
     """
     Configures logging settings and initiates a new log session.
+    Clears the log file before each run.
     """
     log_file_path = os.path.join(BASE_SETTINGS_PATH, 'application_log.log')
+
+    # Clear log file contents
+    with open(log_file_path, 'w', encoding="utf-8") as log_file:
+        log_file.truncate(0)
+
+    # Setup logging
     logging.basicConfig(filename=log_file_path, level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
     current_time = datetime.datetime.now()
     logging.info('---- APPLICATION START (current date/time is: %s) ----', current_time)
