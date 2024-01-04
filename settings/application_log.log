@@ -1,13 +1,14 @@
-2024-01-04 01:23:07,010:INFO:---- APPLICATION START (current date/time is: 2024-01-04 01:23:07.010157) ----
-2024-01-04 01:23:07,010:INFO:---- APPLICATION START ----
-2024-01-04 01:23:07,010:INFO:Getting the snow day policy for: Rockford Public Schools
-2024-01-04 01:23:07,273:INFO:Getting the relevant weather info from the forecast
-2024-01-04 01:23:07,273:INFO:Creating the request message to send to openai
-2024-01-04 01:23:07,273:INFO:Generating the OpenAI chat completion message
-2024-01-04 01:23:12,008:INFO:Generating the OpenAI chat completion message
-2024-01-04 01:23:12,637:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
-2024-01-04 01:23:12,637:INFO:Application is in testing mode, sending the email anyways!
-2024-01-04 01:23:12,637:INFO:Personal testing emails: {}
-2024-01-04 01:23:12,637:INFO:Testing users: {}
-2024-01-04 01:23:12,637:INFO:Sending our snowday prediction to 0 people
-2024-01-04 01:23:12,853:INFO:---- APPLICATION END ----
+2024-01-04 01:29:42,156:INFO:---- APPLICATION START (current date/time is: 2024-01-04 01:29:42.156325) ----
+2024-01-04 01:29:42,156:INFO:---- APPLICATION START ----
+2024-01-04 01:29:42,156:INFO:Getting the snow day policy for: Rockford Public Schools
+2024-01-04 01:29:42,400:INFO:Getting the relevant weather info from the forecast
+2024-01-04 01:29:42,400:INFO:Creating the request message to send to openai
+2024-01-04 01:29:42,400:INFO:Generating the OpenAI chat completion message
+2024-01-04 01:29:55,623:INFO:Generating the OpenAI chat completion message
+2024-01-04 01:29:56,001:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2024-01-04 01:29:56,002:INFO:Application is in testing mode, sending the email anyways!
+2024-01-04 01:29:56,002:INFO:Personal testing emails: "{\"wangler.steven@outlook.com\": \"Steven\"}"
+2024-01-04 01:29:56,002:INFO:Testing users: {"wangler.steven@outlook.com": "Steven"}
+2024-01-04 01:29:56,002:INFO:Sending our snowday prediction to 40 people
+2024-01-04 01:29:56,206:ERROR:An unexpected error occurred: string indices must be integers
+2024-01-04 01:29:56,207:INFO:---- APPLICATION END ----
