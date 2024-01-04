@@ -146,12 +146,14 @@ def fetch_email_recipients_for_testing():
     """
     # Fetching the email recipients from an environment variable
     personal_testing_emails_str = os.environ.get('PERSONAL_TESTING_EMAILS', '{}')
+    logging.info('Personal testing emails: %s', personal_testing_emails_str)
 
     # Convert the string to a dictionary
     try:
         personal_testing_emails = json.loads(personal_testing_emails_str)
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as ex:
         # In case of any error in decoding JSON, return an empty dictionary
+        logging.error('Error fetching test emails. Error: %s', ex)
         personal_testing_emails = {}
 
     return personal_testing_emails
