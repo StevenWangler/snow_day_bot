@@ -54,7 +54,9 @@ def main():
         snowday_message = create_snow_day_message(snow_day_policy)
         email_message = generate_email_content(snowday_message)
         general_functions.write_prediction_to_file(email_message)
-
+        recipients = fetch_email_recipients()
+        logging.info('Rec length: %s', len(recipients))
+        
         if should_send_email(email_message):
             recipients = fetch_email_recipients()
             send_emails(recipients, email_message)
