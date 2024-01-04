@@ -1,6 +1,9 @@
-2024-01-03 21:39:15,399:INFO:---- APPLICATION START (current date/time is: 2024-01-03 21:39:15.399509) ----
-2024-01-03 21:39:15,399:INFO:---- APPLICATION START ----
-2024-01-03 21:39:15,399:INFO:Getting the snow day policy for: Rockford Public Schools
-2024-01-03 21:39:15,509:INFO:Getting the relevant weather info from the forecast
-2024-01-03 21:39:15,510:INFO:Creating the request message to send to openai
-2024-01-03 21:39:15,510:INFO:Generating the OpenAI chat completion message
+2024-01-04 03:26:24,710:INFO:---- APPLICATION START (current date/time is: 2024-01-04 03:26:24.710770) ----
+2024-01-04 03:26:24,710:INFO:---- APPLICATION START ----
+2024-01-04 03:26:24,710:INFO:Getting the snow day policy for: Rockford Public Schools
+2024-01-04 03:26:25,405:INFO:Getting the relevant weather info from the forecast
+2024-01-04 03:26:25,405:INFO:Creating the request message to send to openai
+2024-01-04 03:26:25,406:INFO:Generating the OpenAI chat completion message
+2024-01-04 03:26:33,274:INFO:Generating the OpenAI chat completion message
+2024-01-04 03:26:34,591:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2024-01-04 03:26:34,591:INFO:---- APPLICATION END ----
