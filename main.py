@@ -62,8 +62,10 @@ def main():
             logging.info('There is a less than 50 percent chance of a snow day. Not sending emails.')
 
             if settings.TESTING_MODE:
+                logging.info('Application is in testing mode, sending the email anyways!')
                 # TESTING ONLY: Send email even if the snow day chance is low
                 recipients = fetch_email_recipients_for_testing()
+                logging.info('Testing users: %s', recipients)
                 send_emails(recipients, email_message)
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
