@@ -54,15 +54,13 @@ def main():
         snowday_message = create_snow_day_message(snow_day_policy)
         email_message = generate_email_content(snowday_message)
         general_functions.write_prediction_to_file(email_message)
-        recipients = fetch_email_recipients()
-        logging.info('Rec length: %s', len(recipients))
-        
+
         if should_send_email(email_message):
+            logging.info('Chance of a snow day is greater than 50%')
             recipients = fetch_email_recipients()
             send_emails(recipients, email_message)
         else:
             logging.info('There is a less than 50 percent chance of a snow day. Not sending emails.')
-
             if settings.TESTING_MODE:
                 logging.info('Application is in testing mode, sending the email anyways!')
                 # TESTING ONLY: Send email even if the snow day chance is low
