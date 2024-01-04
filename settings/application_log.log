@@ -1,12 +1,11 @@
-2024-01-04 03:18:46,825:INFO:---- APPLICATION START (current date/time is: 2024-01-04 03:18:46.825813) ----
-2024-01-04 03:18:46,826:INFO:---- APPLICATION START ----
-2024-01-04 03:18:46,826:INFO:Getting the snow day policy for: Rockford Public Schools
-2024-01-04 03:18:47,483:INFO:Getting the relevant weather info from the forecast
-2024-01-04 03:18:47,483:INFO:Creating the request message to send to openai
-2024-01-04 03:18:47,483:INFO:Generating the OpenAI chat completion message
-2024-01-04 03:19:17,575:ERROR:Error in generate_chat_response: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=30)
-2024-01-04 03:19:17,753:INFO:Fetching sign-up responses from Google Form.
-2024-01-04 03:19:18,555:INFO:Rec length: 23
-2024-01-04 03:19:18,555:INFO:Generating the OpenAI chat completion message
-2024-01-04 03:19:18,999:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
-2024-01-04 03:19:19,000:INFO:---- APPLICATION END ----
+2024-01-04 03:20:20,163:INFO:---- APPLICATION START (current date/time is: 2024-01-04 03:20:20.163597) ----
+2024-01-04 03:20:20,163:INFO:---- APPLICATION START ----
+2024-01-04 03:20:20,163:INFO:Getting the snow day policy for: Rockford Public Schools
+2024-01-04 03:20:20,441:INFO:Getting the relevant weather info from the forecast
+2024-01-04 03:20:20,441:INFO:Creating the request message to send to openai
+2024-01-04 03:20:20,441:INFO:Generating the OpenAI chat completion message
+2024-01-04 03:20:31,902:INFO:Fetching sign-up responses from Google Form.
+2024-01-04 03:20:32,368:INFO:Rec length: 23
+2024-01-04 03:20:32,368:INFO:Generating the OpenAI chat completion message
+2024-01-04 03:20:36,521:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2024-01-04 03:20:36,522:INFO:---- APPLICATION END ----
