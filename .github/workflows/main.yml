@@ -36,6 +36,7 @@ jobs:
         SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
         SENDER_EMAIL_PASSWORD: ${{ secrets.SENDER_EMAIL_PASSWORD }}
         GOOGLE_ACCOUNT_API_KEY: ${{ secrets.GOOGLE_ACCOUNT_API_KEY }}
+        PERSONAL_TESTING_EMAILS: ${{ secrets.PERSONAL_TESTING_EMAILS }}
       run: python main.py 
 
     - name: Commit and push if changes
