@@ -1,14 +1,14 @@
-2024-01-04 01:29:42,156:INFO:---- APPLICATION START (current date/time is: 2024-01-04 01:29:42.156325) ----
-2024-01-04 01:29:42,156:INFO:---- APPLICATION START ----
-2024-01-04 01:29:42,156:INFO:Getting the snow day policy for: Rockford Public Schools
-2024-01-04 01:29:42,400:INFO:Getting the relevant weather info from the forecast
-2024-01-04 01:29:42,400:INFO:Creating the request message to send to openai
-2024-01-04 01:29:42,400:INFO:Generating the OpenAI chat completion message
-2024-01-04 01:29:55,623:INFO:Generating the OpenAI chat completion message
-2024-01-04 01:29:56,001:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
-2024-01-04 01:29:56,002:INFO:Application is in testing mode, sending the email anyways!
-2024-01-04 01:29:56,002:INFO:Personal testing emails: "{\"wangler.steven@outlook.com\": \"Steven\"}"
-2024-01-04 01:29:56,002:INFO:Testing users: {"wangler.steven@outlook.com": "Steven"}
-2024-01-04 01:29:56,002:INFO:Sending our snowday prediction to 40 people
-2024-01-04 01:29:56,206:ERROR:An unexpected error occurred: string indices must be integers
-2024-01-04 01:29:56,207:INFO:---- APPLICATION END ----
+2024-01-04 02:31:38,418:INFO:---- APPLICATION START (current date/time is: 2024-01-04 02:31:38.418836) ----
+2024-01-04 02:31:38,418:INFO:---- APPLICATION START ----
+2024-01-04 02:31:38,419:INFO:Getting the snow day policy for: Rockford Public Schools
+2024-01-04 02:31:39,029:INFO:Getting the relevant weather info from the forecast
+2024-01-04 02:31:39,029:INFO:Creating the request message to send to openai
+2024-01-04 02:31:39,029:INFO:Generating the OpenAI chat completion message
+2024-01-04 02:31:52,472:INFO:Generating the OpenAI chat completion message
+2024-01-04 02:31:53,276:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2024-01-04 02:31:53,276:INFO:Application is in testing mode, sending the email anyways!
+2024-01-04 02:31:53,276:INFO:Personal testing emails: {"wangler.steven@outlook.com": "Steven"}
+2024-01-04 02:31:53,277:INFO:Testing users: {'wangler.steven@outlook.com': 'Steven'}
+2024-01-04 02:31:53,277:INFO:Sending our snowday prediction to 1 people
+2024-01-04 02:31:54,484:INFO:Message delivered
+2024-01-04 02:31:54,494:INFO:---- APPLICATION END ----
