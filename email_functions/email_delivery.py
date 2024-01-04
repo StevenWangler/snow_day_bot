@@ -56,14 +56,14 @@ def send_email(smtp_connection, message, email, first_name, username, max_retrie
             smtp_connection.send_message(msg)
             status = smtp_connection.noop()[0]
             if status == 250:
-                logging.info('Message delivered to %s', recipient)
+                logging.info('Message delivered')
                 break
 
             retries += 1
-            logging.warning('Delivery failed for %s. Retrying... (retry %s of %s)', recipient, retries, max_retries)
+            logging.warning('Delivery failed. Retrying... (retry %s of %s)', retries, max_retries)
         except smtplib.SMTPException as _e:
             retries += 1
-            logging.warning('SMTPException occurred when delivering message to %s. Retrying... (retry %s of %s) (%s)',recipient, retries, max_retries, str(_e))
+            logging.warning('SMTPException occurred when delivering message. Retrying... (retry %s of %s) (%s)', retries, max_retries, str(_e))
             time.sleep(2)  # delay before retrying
     if retries == max_retries:
         logging.error('Delivery failed for %s after %s retries', recipient, max_retries)
