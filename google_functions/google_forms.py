@@ -95,9 +95,9 @@ def get_sign_up_responses():
                 email_to_name[email_answer] = name_answer
 
         return email_to_name
-    except (requests.HTTPError, ConnectionError, requests.Timeout) as ex:
-        logging.error('Specific error in get_form_responses: %s', ex)
-    except Exception as ex:
-        logging.error('Unexpected error in get_form_responses: %s', ex)
+    except (requests.HTTPError, ConnectionError, requests.Timeout):
+        logging.error('Specific error in get_form_responses')
+    except Exception:
+        logging.error('Unexpected error in get_form_responses.')
 
     return {}
