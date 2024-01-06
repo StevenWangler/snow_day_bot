@@ -13,22 +13,21 @@ body {
     padding: 10px 20px; /* Added horizontal padding */
   }
   
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: inline-block; /* Align the list items inline */
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
     }
   
-      nav ul li {
-        display: inline;
-        margin-right: 15px; /* Adjust spacing between items */
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px; /* Padding for clickable area */
       }
-    
-        nav a {
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
+  
+        nav a:hover {
+          background-color: #555; /* Hover effect */
+          border-radius: 5px;
         }
   
   header {

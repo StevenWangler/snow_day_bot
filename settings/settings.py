@@ -31,7 +31,7 @@ ENGINE_USER = None
 CHAT_COMPLETIONS_URL = 'https://api.openai.com/v1/chat/completions'
 IMAGE_GENERATION_URL = 'https://api.openai.com/v1/images/generations'
 AI_RESPONSE_THEMES = [
-                      'A cool high school student'
+                      'A weather man'
                       ]
 
 # Communication data

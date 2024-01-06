@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 html {
     height: 100%;
   }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #ffffff; /* White background */
   color: #333; /* Black text for readability */
   display: flex;
@@ -21,22 +23,21 @@ nav {
   padding: 10px 20px; /* Added horizontal padding */
 }
 
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: inline-block; /* Align the list items inline */
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
   }
 
-    nav ul li {
-      display: inline;
-      margin-right: 15px; /* Adjust spacing between items */
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px; /* Padding for clickable area */
     }
-  
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
+
+      nav a:hover {
+        background-color: #555; /* Hover effect */
+        border-radius: 5px;
       }
   
 header {
@@ -45,7 +46,11 @@ header {
   padding: 20px 0;
   text-align: center;
 }
-  
+
+header h1 {
+  margin: 0;
+}
+        
 main {
   flex: 1 0 auto; /* Flex grow and shrink as needed, but don't let it be squeezed smaller */
   padding: 20px;
@@ -58,22 +63,33 @@ section {
 #prediction {
   margin-top: 20px;
   padding: 20px;
-  border: 2px solid #ff6600; /* Orange border */
+  border: 2px solid #ff6600;
   border-radius: 10px;
   background-color: white;
-  margin-left: 50px;
-  margin-right: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  margin-left: auto; /* Centering */
+  margin-right: auto;
+  max-width: 600px; /* Max width for better readability */
+}
+
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  #prediction {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 footer {
-  background-color: #000000; /* Black */
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  margin-top: auto; /* Push footer to the bottom */
 }
 
 .confidence-query {
@@ -106,5 +122,14 @@ footer {
 }
 
 .date {
-  margin-left: 50px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background-color: #ff6600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  margin-left: auto; /* Centering */
+  margin-right: auto;
+  max-width: 600px; /* Max width for better readability */
+  text-align: center;
 }
