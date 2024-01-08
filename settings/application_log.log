@@ -1,9 +1,34 @@
-2024-01-08 00:54:59,463:INFO:---- APPLICATION START (current date/time is: 2024-01-08 00:54:59.463855) ----
-2024-01-08 00:54:59,464:INFO:---- APPLICATION START ----
-2024-01-08 00:54:59,464:INFO:Getting the snow day policy for: Rockford Public Schools
-2024-01-08 00:55:00,025:INFO:Getting the relevant weather info from the forecast
-2024-01-08 00:55:00,025:INFO:Creating the request message to send to openai
-2024-01-08 00:55:00,026:INFO:Generating the OpenAI chat completion message
-2024-01-08 00:55:16,859:INFO:Generating the OpenAI chat completion message
-2024-01-08 00:55:18,069:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
-2024-01-08 00:55:18,069:INFO:---- APPLICATION END ----
+2024-01-08 20:54:29,912:INFO:---- APPLICATION START (current date/time is: 2024-01-08 20:54:29.912883) ----
+2024-01-08 20:54:29,913:INFO:---- APPLICATION START ----
+2024-01-08 20:54:29,913:INFO:Getting the snow day policy for: Rockford Public Schools
+2024-01-08 20:54:30,181:INFO:Getting the relevant weather info from the forecast
+2024-01-08 20:54:30,181:INFO:Creating the request message to send to openai
+2024-01-08 20:54:30,181:INFO:Generating the OpenAI chat completion message
+2024-01-08 20:54:54,383:INFO:Generating the OpenAI chat completion message
+2024-01-08 20:54:55,052:INFO:Chance of a snow day is greater than 50%
+2024-01-08 20:54:55,196:INFO:Fetching sign-up responses from Google Form.
+2024-01-08 20:54:56,563:INFO:Sending our snowday prediction to 23 people
+2024-01-08 20:54:57,271:INFO:Message delivered
+2024-01-08 20:54:58,131:INFO:Message delivered
+2024-01-08 20:54:58,813:INFO:Message delivered
+2024-01-08 20:54:59,621:INFO:Message delivered
+2024-01-08 20:55:00,136:INFO:Message delivered
+2024-01-08 20:55:00,604:INFO:Message delivered
+2024-01-08 20:55:01,027:INFO:Message delivered
+2024-01-08 20:55:01,512:INFO:Message delivered
+2024-01-08 20:55:02,408:INFO:Message delivered
+2024-01-08 20:55:02,855:INFO:Message delivered
+2024-01-08 20:55:03,694:INFO:Message delivered
+2024-01-08 20:55:04,548:INFO:Message delivered
+2024-01-08 20:55:05,342:INFO:Message delivered
+2024-01-08 20:55:06,223:INFO:Message delivered
+2024-01-08 20:55:06,828:INFO:Message delivered
+2024-01-08 20:55:07,207:INFO:Message delivered
+2024-01-08 20:55:08,398:INFO:Message delivered
+2024-01-08 20:55:08,769:INFO:Message delivered
+2024-01-08 20:55:09,597:INFO:Message delivered
+2024-01-08 20:55:10,086:INFO:Message delivered
+2024-01-08 20:55:10,472:INFO:Message delivered
+2024-01-08 20:55:10,839:INFO:Message delivered
+2024-01-08 20:55:11,660:INFO:Message delivered
+2024-01-08 20:55:11,671:INFO:---- APPLICATION END ----
