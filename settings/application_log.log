@@ -1,12 +1,37 @@
-2024-01-09 00:54:32,671:INFO:---- APPLICATION START (current date/time is: 2024-01-09 00:54:32.671303) ----
-2024-01-09 00:54:32,671:INFO:---- APPLICATION START ----
-2024-01-09 00:54:32,671:INFO:Getting the snow day policy for: Rockford Public Schools
-2024-01-09 00:54:33,067:INFO:Getting the relevant weather info from the forecast
-2024-01-09 00:54:33,067:INFO:Creating the request message to send to openai
-2024-01-09 00:54:33,067:INFO:Generating the OpenAI chat completion message
-2024-01-09 00:54:56,674:INFO:Generating the OpenAI chat completion message
-2024-01-09 00:54:57,952:INFO:Chance of a snow day is greater than 50%
-2024-01-09 00:54:57,952:INFO:Personal testing emails: {"wangler.steven@outlook.com": "Steven"}
-2024-01-09 00:54:57,952:INFO:Sending our snowday prediction to 1 people
-2024-01-09 00:54:58,884:INFO:Message delivered
-2024-01-09 00:54:58,920:INFO:---- APPLICATION END ----
+2024-01-10 00:54:47,199:INFO:---- APPLICATION START (current date/time is: 2024-01-10 00:54:47.199134) ----
+2024-01-10 00:54:47,199:INFO:---- APPLICATION START ----
+2024-01-10 00:54:47,199:INFO:Getting the snow day policy for: Rockford Public Schools
+2024-01-10 00:54:47,571:INFO:Getting the relevant weather info from the forecast
+2024-01-10 00:54:47,571:INFO:Creating the request message to send to openai
+2024-01-10 00:54:47,571:INFO:Generating the OpenAI chat completion message
+2024-01-10 00:55:09,751:INFO:Generating the OpenAI chat completion message
+2024-01-10 00:55:10,719:INFO:Chance of a snow day is greater than 50%
+2024-01-10 00:55:10,880:INFO:Fetching sign-up responses from Google Form.
+2024-01-10 00:55:11,735:INFO:Sending our snowday prediction to 26 people
+2024-01-10 00:55:15,342:INFO:Message delivered
+2024-01-10 00:55:16,118:INFO:Message delivered
+2024-01-10 00:55:17,152:INFO:Message delivered
+2024-01-10 00:55:18,033:INFO:Message delivered
+2024-01-10 00:55:18,945:INFO:Message delivered
+2024-01-10 00:55:19,949:INFO:Message delivered
+2024-01-10 00:55:20,709:INFO:Message delivered
+2024-01-10 00:55:21,469:INFO:Message delivered
+2024-01-10 00:55:22,347:INFO:Message delivered
+2024-01-10 00:55:23,081:INFO:Message delivered
+2024-01-10 00:55:23,997:INFO:Message delivered
+2024-01-10 00:55:24,554:INFO:Message delivered
+2024-01-10 00:55:25,471:INFO:Message delivered
+2024-01-10 00:55:26,215:INFO:Message delivered
+2024-01-10 00:55:27,089:INFO:Message delivered
+2024-01-10 00:55:27,937:INFO:Message delivered
+2024-01-10 00:55:28,532:INFO:Message delivered
+2024-01-10 00:55:29,121:INFO:Message delivered
+2024-01-10 00:55:29,949:INFO:Message delivered
+2024-01-10 00:55:30,628:INFO:Message delivered
+2024-01-10 00:55:32,046:INFO:Message delivered
+2024-01-10 00:55:32,890:INFO:Message delivered
+2024-01-10 00:55:33,482:INFO:Message delivered
+2024-01-10 00:55:34,455:INFO:Message delivered
+2024-01-10 00:55:35,276:INFO:Message delivered
+2024-01-10 00:55:36,267:INFO:Message delivered
+2024-01-10 00:55:36,310:INFO:---- APPLICATION END ----
