@@ -17,7 +17,7 @@ ZIP_CODE = '49341'
 WEATHER_API_BASE = 'http://api.weatherapi.com/v1/'
 
 # OpenAI data
-ENGINE_NAME = 'gpt-4'
+ENGINE_NAME = 'gpt-4-1106-preview'
 ENGINE_TEMPERATURE = 1
 ENGINE_TOP_P = 1
 ENGINE_N = 1
@@ -31,7 +31,9 @@ ENGINE_USER = None
 CHAT_COMPLETIONS_URL = 'https://api.openai.com/v1/chat/completions'
 IMAGE_GENERATION_URL = 'https://api.openai.com/v1/images/generations'
 AI_RESPONSE_THEMES = [
-                      'A weather man'
+                      'A weather man',
+                      'A scientist',
+                      'A high school teacher',
                       ]
 
 # Communication data
