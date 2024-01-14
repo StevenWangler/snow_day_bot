@@ -32,6 +32,7 @@ Note:
 import os
 import json
 import logging
+import time
 import weatherapi.weather_api_calls as weather_api
 from weatherapi import weather_data
 from openai_actions import open_ai_api_calls as openai_api
@@ -50,8 +51,7 @@ def main():
     logging.info('---- APPLICATION START ----')
 
     try:
-        snow_day_policy = fetch_snow_day_policy()
-        snowday_message = create_snow_day_message(snow_day_policy)
+        snowday_message = create_snow_day_message()
         email_message = generate_email_content(snowday_message)
         general_functions.write_prediction_to_file(email_message)
 
@@ -81,7 +81,7 @@ def fetch_snow_day_policy():
     """
     return general_functions.get_snow_day_policy()
 
-def create_snow_day_message(policy):
+def create_snow_day_message():
     """
     Generate a snow day message based on weather data and the given policy.
     
@@ -95,7 +95,7 @@ def create_snow_day_message(policy):
     weather_info = weather_data.get_relevant_weather_information(weather_api.get_forecast())
 
     # Create a message based on the weather data and policy
-    return openai_data.create_open_ai_snow_day_message(weather_info, policy)
+    return openai_data.create_open_ai_snow_day_message(weather_info)
 
 def generate_email_content(message):
     """
@@ -107,7 +107,30 @@ def generate_email_content(message):
     Returns:
         str: The generated email content.
     """
-    return openai_api.generate_chat_response(message)
+    assistant = openai_api.get_assistant()
+    thread = openai_api.create_thread()
+    openai_api.add_message_to_thread(thread.id, message)
+    run = openai_api.run_assistant_on_thread(thread.id, assistant)
+    while True:
+        status = openai_api.check_run_status(thread.id, run.id)
+        if status == 'completed':
+            break
+        print('Waiting for ai completion...')
+        time.sleep(10)
+
+    response = openai_api.get_messages(thread.id)
+    prediction = response.data[0]
+    for content in prediction.content:
+        if not hasattr(content, 'type'):
+            continue
+
+        if content.type == 'text' and hasattr(content, 'text') and hasattr(content.text, 'value'):
+            prediction = content.text.value
+            break
+
+    print(f'\n\n\n{prediction}')
+
+    return prediction
 
 def should_send_email(message):
     """
@@ -134,8 +157,8 @@ def fetch_email_recipients():
     """
     if settings.TESTING_MODE:
         return fetch_email_recipients_for_testing()
-    else:
-        return google_forms.get_sign_up_responses()
+
+    return google_forms.get_sign_up_responses()
 
 def fetch_email_recipients_for_testing():
     """
