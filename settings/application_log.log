@@ -1,19 +1,20 @@
-2024-01-14 18:30:52,745:INFO:---- APPLICATION START (current date/time is: 2024-01-14 18:30:52.745735) ----
-2024-01-14 18:30:52,745:INFO:---- APPLICATION START ----
-2024-01-14 18:30:52,849:INFO:Getting the relevant weather info from the evening to the next morning
-2024-01-14 18:30:52,849:INFO:Creating the request message to send to OpenAI
-2024-01-14 18:30:53,227:INFO:HTTP Request: GET https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
-2024-01-14 18:30:53,399:INFO:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
-2024-01-14 18:30:53,637:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_r4Wpmdxc73mGOfhY3UC8Cg5D/messages "HTTP/1.1 200 OK"
-2024-01-14 18:30:54,024:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_r4Wpmdxc73mGOfhY3UC8Cg5D/runs "HTTP/1.1 200 OK"
-2024-01-14 18:30:54,249:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_r4Wpmdxc73mGOfhY3UC8Cg5D/runs/run_6miFE3Z52PhPM5OKfBVnKrXd "HTTP/1.1 200 OK"
-2024-01-14 18:31:04,558:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_r4Wpmdxc73mGOfhY3UC8Cg5D/runs/run_6miFE3Z52PhPM5OKfBVnKrXd "HTTP/1.1 200 OK"
-2024-01-14 18:31:14,814:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_r4Wpmdxc73mGOfhY3UC8Cg5D/runs/run_6miFE3Z52PhPM5OKfBVnKrXd "HTTP/1.1 200 OK"
-2024-01-14 18:31:15,057:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_r4Wpmdxc73mGOfhY3UC8Cg5D/messages "HTTP/1.1 200 OK"
-2024-01-14 18:31:15,074:INFO:Generating the OpenAI chat completion message
-2024-01-14 18:31:16,352:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-01-14 18:31:16,367:INFO:Chance of a snow day is greater than 50%
-2024-01-14 18:31:16,367:INFO:Personal testing emails: {"wangler.steven@outlook.com": "Steven"}
-2024-01-14 18:31:16,367:INFO:Sending our snowday prediction to 1 people
-2024-01-14 18:31:17,654:INFO:Message delivered
-2024-01-14 18:31:17,698:INFO:---- APPLICATION END ----
+2024-01-14 18:40:27,765:INFO:---- APPLICATION START (current date/time is: 2024-01-14 18:40:27.765683) ----
+2024-01-14 18:40:27,765:INFO:---- APPLICATION START ----
+2024-01-14 18:40:28,061:INFO:Getting the relevant weather info from the evening to the next morning
+2024-01-14 18:40:28,061:INFO:Creating the request message to send to OpenAI
+2024-01-14 18:40:28,496:INFO:HTTP Request: GET https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
+2024-01-14 18:40:28,719:INFO:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-01-14 18:40:29,079:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/messages "HTTP/1.1 200 OK"
+2024-01-14 18:40:29,471:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/runs "HTTP/1.1 200 OK"
+2024-01-14 18:40:29,705:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/runs/run_2aK93m45ILC5eE2VHbzxzorW "HTTP/1.1 200 OK"
+2024-01-14 18:40:39,944:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/runs/run_2aK93m45ILC5eE2VHbzxzorW "HTTP/1.1 200 OK"
+2024-01-14 18:40:50,210:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/runs/run_2aK93m45ILC5eE2VHbzxzorW "HTTP/1.1 200 OK"
+2024-01-14 18:41:00,751:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/runs/run_2aK93m45ILC5eE2VHbzxzorW "HTTP/1.1 200 OK"
+2024-01-14 18:41:00,992:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/messages "HTTP/1.1 200 OK"
+2024-01-14 18:41:01,031:INFO:Generating the OpenAI chat completion message
+2024-01-14 18:41:01,768:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-01-14 18:41:01,793:INFO:Chance of a snow day is greater than 50%
+2024-01-14 18:41:01,793:INFO:Personal testing emails: {"wangler.steven@outlook.com": "Steven"}
+2024-01-14 18:41:01,793:INFO:Sending our snowday prediction to 1 people
+2024-01-14 18:41:03,512:INFO:Message delivered
+2024-01-14 18:41:03,554:INFO:---- APPLICATION END ----
