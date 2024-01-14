@@ -4,7 +4,7 @@ talk to API's, etc.
 '''
 
 # General settings
-TESTING_MODE = True
+TESTING_MODE = False
 
 # School data
 SCHOOL_NAME = 'Rockford Public Schools'
