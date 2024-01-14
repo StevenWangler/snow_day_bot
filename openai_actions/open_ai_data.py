@@ -18,69 +18,100 @@ import logging
 import datetime
 from settings import settings
 
-def create_open_ai_snow_day_message(current_weather_data, snow_day_policy):
+def create_hourly_weather_summary(current_weather_data):
     '''
-    this method is used to create the json message we are
-    going to send to the open ai engine
+    Creates a summary string of detailed hourly weather data.
     '''
-    logging.info('Creating the request message to send to openai')
-    try:
-        message = f'''
-        Respond with a percentage chance that a snow day will occur tomorrow for {settings.SCHOOL_NAME}.
-        
-        Here are the rules I would like you to follow:
+    hourly_summary = ""
 
-        1) You must respond in the tone of {random.choice(settings.AI_RESPONSE_THEMES)}
+    # Loop for 7 PM to Midnight (19 to 23 hours)
+    for hour in range(19, 24):
+        summary = " ".join([
+            f"Hour {hour}:",
+            f"Condition: {current_weather_data.get(f'hour_{hour}_condition', 'No data')},",
+            f"Temp: {current_weather_data.get(f'hour_{hour}_temp_f', 'No data')}°F,",
+            f"Chance of Snow: {current_weather_data.get(f'hour_{hour}_chance_of_snow', 'No data')}%,",
+            f"Chance of Rain: {current_weather_data.get(f'hour_{hour}_chance_of_rain', 'No data')}%,",
+            f"Wind Speed: {current_weather_data.get(f'hour_{hour}_wind_mph', 'No data')}MPH,",
+            f"Visibility: {current_weather_data.get(f'hour_{hour}_visibility_miles', 'No data')} miles,",
+            f"Snowfall: {current_weather_data.get(f'hour_{hour}_snow_cm', 'No data')}cm,",
+            f"Humidity: {current_weather_data.get(f'hour_{hour}_humidity', 'No data')}%,",
+            f"Cloud Cover: {current_weather_data.get(f'hour_{hour}_cloud', 'No data')}%,",
+            f"Pressure: {current_weather_data.get(f'hour_{hour}_pressure_in', 'No data')}in,",
+            f"Feels Like: {current_weather_data.get(f'hour_{hour}_feelslike_f', 'No data')}°F,",
+            f"Wind Chill: {current_weather_data.get(f'hour_{hour}_windchill_f', 'No data')}°F,",
+            f"Gusts: {current_weather_data.get(f'hour_{hour}_gust_mph', 'No data')}MPH,",
+            f"UV Index: {current_weather_data.get(f'hour_{hour}_uv', 'No data')}"
+        ])
+        hourly_summary += summary + " "
+
+    # Loop for Midnight to 8 AM (0 to 7 hours)
+    for hour in range(0, 8):
+        summary = " ".join([
+            f"Hour {hour}:",
+            f"Condition: {current_weather_data.get(f'hour_{hour}_condition', 'No data')},",
+            f"Temp: {current_weather_data.get(f'hour_{hour}_temp_f', 'No data')}°F,",
+            f"Chance of Snow: {current_weather_data.get(f'hour_{hour}_chance_of_snow', 'No data')}%,",
+            f"Chance of Rain: {current_weather_data.get(f'hour_{hour}_chance_of_rain', 'No data')}%,",
+            f"Wind Speed: {current_weather_data.get(f'hour_{hour}_wind_mph', 'No data')}MPH,",
+            f"Visibility: {current_weather_data.get(f'hour_{hour}_visibility_miles', 'No data')} miles,",
+            f"Snowfall: {current_weather_data.get(f'hour_{hour}_snow_cm', 'No data')}cm,",
+            f"Humidity: {current_weather_data.get(f'hour_{hour}_humidity', 'No data')}%,",
+            f"Cloud Cover: {current_weather_data.get(f'hour_{hour}_cloud', 'No data')}%,",
+            f"Pressure: {current_weather_data.get(f'hour_{hour}_pressure_in', 'No data')}in,",
+            f"Feels Like: {current_weather_data.get(f'hour_{hour}_feelslike_f', 'No data')}°F,",
+            f"Wind Chill: {current_weather_data.get(f'hour_{hour}_windchill_f', 'No data')}°F,",
+            f"Gusts: {current_weather_data.get(f'hour_{hour}_gust_mph', 'No data')}MPH,",
+            f"UV Index: {current_weather_data.get(f'hour_{hour}_uv', 'No data')}"
+        ])
+        hourly_summary += summary + " "
+
+    return hourly_summary.strip()  # Remove any trailing space
+
+def create_open_ai_snow_day_message(current_weather_data):
+    '''
+    This method is used to create the JSON message we are
+    going to send to the OpenAI engine.
+    '''
+    logging.info('Creating the request message to send to OpenAI')
+    try:
+        hourly_summary = create_hourly_weather_summary(current_weather_data)
+        theme = random.choice(settings.AI_RESPONSE_THEMES)
+        month = datetime.date.today().month
+        school_state = settings.SCHOOL_DISTRICT_STATE
+        school_name = settings.SCHOOL_NAME
+
+        message = f'''
+        Respond with a percentage chance that a snow day will occur tomorrow for {school_name}.
+
+        Here are the rules I would like you to follow:
+        1) You must respond in the tone of {theme}
         2) Use the information below to make up your opinion
         3) Provide a SHORT explanation of the percentage chance you came up with
         4) Work your answer into the short explanation
         5) Be logical and honest in your answer
         6) If you don't think there is any chance, just say that there is a 0% chance.
 
-        Here is some additional information to consider:
-        1) The school is located in the state of {settings.SCHOOL_DISTRICT_STATE}
-        2) Take the current month into consideration, which is: {datetime.date.today().month}
+        Additional information to consider:
+        - The school is located in the state of {school_state}
+        - Current month: {month} (of 12)
 
-        Here are the current weather conditions for the school district area:
+        Hourly weather conditions from 7 PM to 8 AM:
+        {hourly_summary}
 
-        The minimum temperature for the day will be {current_weather_data['current_day_mintemp_f']} degrees Fahrenheit, with
-        a maximum temperature of {current_weather_data['current_day_maxtemp_f']} degrees Fahrenheit. The maximum wind speed
-        for the day will be {current_weather_data['current_day_maxwind_mph']}MPH. The wind chill (or "feels like") is currently
-        {current_weather_data['current_day_feelslike_f']} degrees Fahrenheit. As of now, there is a {current_weather_data['current_day_daily_chance_of_snow']}%
-        chance that it will snow today. There is also a {current_weather_data['current_day_daily_chance_of_rain']}% chance that it will rain today.
-        The total amount of precipitation today is going to be around {current_weather_data['current_day_totalprecip_in']} inches. The average humidity
-        for today is {current_weather_data['current_day_daily_avghumidity']}%. The current day conditions are {current_weather_data['current_day_conditions']}.
-
-        Here are the weather conditions for tomorrow:
-
-        Tomorrow, the minimum temperature for the day will be {current_weather_data['next_day_mintemp_f']} degrees Fahrenheit, with
-        a maximum temperature of {current_weather_data['next_day_maxtemp_f']} degrees Fahrenheit. The maximum wind speed
-        for tomorrow will be {current_weather_data['next_day_maxwind_mph']}MPH. The wind chill (or "feels like") for tomorrow will be
-        {current_weather_data['next_day_feelslike_f']} degrees Fahrenheit. As of now, there is a {current_weather_data['next_day_daily_chance_of_snow']}% 
-        chance that it will snow tomorrow. There is also a {current_weather_data['next_day_daily_chance_of_rain']}% chance that it will rain tomorrow. 
-        The total amount of precipitation tomorrow is going to be around {current_weather_data['next_day_totalprecip_in']} inches. The average humidity 
-        for tomorrow will be {current_weather_data['next_day_daily_avghumidity']}%. The conditions for tomorrow are {current_weather_data['next_day_conditions']}.
-
-        If there are any weather alerts or warnings, they are listed below (MAKE SURE THE ALERTS ARE FOR KENT COUNTY (WHERE ROCKFORD IS):
-
-        Weather alert event: {current_weather_data['weather_alert_event'] if 'weather_alert_event' in current_weather_data else 'no data available'}
-        Weather alert event description: {current_weather_data['weather_alert_desc'] if 'weather_alert_desc' in current_weather_data else 'no data available'}
-        Weather alert severity: {current_weather_data['weather_alert_severity'] if 'weather_alert_severity' in current_weather_data else 'no data available'}
-        Weather alert certainty: {current_weather_data['weather_alert_certainty'] if 'weather_alert_certainty' in current_weather_data else 'no data available'}
-        Weather alert urgency: {current_weather_data['weather_alert_urgency'] if 'weather_alert_urgency' in current_weather_data else 'no data available'}
-        
-        Here is some information about the schools snow day policy and how snow days are decided:
-
-        {snow_day_policy}
+        Weather alerts (if applicable):
+        - Event: {current_weather_data.get('weather_alert_event', 'No data')}
+        - Description: {current_weather_data.get('weather_alert_desc', 'No data')}
+        - Severity: {current_weather_data.get('weather_alert_severity', 'No data')}
+        - Certainty: {current_weather_data.get('weather_alert_certainty', 'No data')}
+        - Urgency: {current_weather_data.get('weather_alert_urgency', 'No data')}
         '''
-        message = message.replace("\n", "\\n")
-        message = message.strip()
-        message_object = json.loads(json.dumps([{"role": "user", "content": message}]))
+        message = message.replace("\n", "\\n").strip()
     except KeyError as ex:
-        logging.error('An error occurred while creating message: %s',str(ex))
-        message_object = None
+        logging.error('An error occurred while creating message: %s', str(ex))
+        message = None
 
-    return message_object
+    return message
 
 def create_open_ai_prediction_check_message(prediction_message):
     """

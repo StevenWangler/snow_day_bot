@@ -1,4 +1,4 @@
-openai
+openai==1.7.2
 google-api-python-client
 httplib2
 oauth2client
