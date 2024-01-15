@@ -1,19 +1,17 @@
-2024-01-14 23:53:11,869:INFO:---- APPLICATION START (current date/time is: 2024-01-14 23:53:11.869439) ----
-2024-01-14 23:53:11,869:INFO:---- APPLICATION START ----
-2024-01-14 23:53:12,321:INFO:Getting the relevant weather info from the evening to the next morning
-2024-01-14 23:53:12,321:INFO:Creating the request message to send to OpenAI
-2024-01-14 23:53:12,517:INFO:HTTP Request: GET https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
-2024-01-14 23:53:12,642:INFO:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
-2024-01-14 23:53:12,861:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_VhlmBIt0eEM0Y2Spy0DHpC4u/messages "HTTP/1.1 200 OK"
-2024-01-14 23:53:13,211:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_VhlmBIt0eEM0Y2Spy0DHpC4u/runs "HTTP/1.1 200 OK"
-2024-01-14 23:53:13,407:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_VhlmBIt0eEM0Y2Spy0DHpC4u/runs/run_Dsw4sGWOoHIcglFol4ojv7nM "HTTP/1.1 200 OK"
-2024-01-14 23:53:23,572:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_VhlmBIt0eEM0Y2Spy0DHpC4u/runs/run_Dsw4sGWOoHIcglFol4ojv7nM "HTTP/1.1 200 OK"
-2024-01-14 23:53:33,766:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_VhlmBIt0eEM0Y2Spy0DHpC4u/runs/run_Dsw4sGWOoHIcglFol4ojv7nM "HTTP/1.1 200 OK"
-2024-01-14 23:53:33,965:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_VhlmBIt0eEM0Y2Spy0DHpC4u/messages "HTTP/1.1 200 OK"
-2024-01-14 23:53:33,969:INFO:Generating the OpenAI chat completion message
-2024-01-14 23:53:34,621:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-01-14 23:53:34,623:INFO:Chance of a snow day is greater than 50%
-2024-01-14 23:53:34,623:INFO:Personal testing emails: {"wangler.steven@outlook.com": "Steven"}
-2024-01-14 23:53:34,623:INFO:Sending our snowday prediction to 1 people
-2024-01-14 23:53:35,739:INFO:Message delivered
-2024-01-14 23:53:35,772:INFO:---- APPLICATION END ----
+2024-01-15 00:56:43,049:INFO:---- APPLICATION START (current date/time is: 2024-01-15 00:56:43.049850) ----
+2024-01-15 00:56:43,050:INFO:---- APPLICATION START ----
+2024-01-15 00:56:44,214:INFO:Getting the relevant weather info from the evening to the next morning
+2024-01-15 00:56:44,214:INFO:Creating the request message to send to OpenAI
+2024-01-15 00:56:44,490:INFO:HTTP Request: GET https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
+2024-01-15 00:56:44,638:INFO:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-01-15 00:56:44,818:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_uK5hpj0A6TuvKHSBKrXyWbx6/messages "HTTP/1.1 200 OK"
+2024-01-15 00:56:45,142:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_uK5hpj0A6TuvKHSBKrXyWbx6/runs "HTTP/1.1 200 OK"
+2024-01-15 00:56:45,290:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_uK5hpj0A6TuvKHSBKrXyWbx6/runs/run_Vzmb23XEkDP6Di9zLiQOULhk "HTTP/1.1 200 OK"
+2024-01-15 00:56:55,418:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_uK5hpj0A6TuvKHSBKrXyWbx6/runs/run_Vzmb23XEkDP6Di9zLiQOULhk "HTTP/1.1 200 OK"
+2024-01-15 00:57:05,547:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_uK5hpj0A6TuvKHSBKrXyWbx6/runs/run_Vzmb23XEkDP6Di9zLiQOULhk "HTTP/1.1 200 OK"
+2024-01-15 00:57:05,782:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_uK5hpj0A6TuvKHSBKrXyWbx6/messages "HTTP/1.1 200 OK"
+2024-01-15 00:57:05,786:INFO:Generating the OpenAI chat completion message
+2024-01-15 00:57:06,252:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-01-15 00:57:06,254:INFO:Chance of a snow day is greater than 50%
+2024-01-15 00:57:06,364:ERROR:An unexpected error occurred: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2024-01-15 00:57:06,365:INFO:---- APPLICATION END ----
