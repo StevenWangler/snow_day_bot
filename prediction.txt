@@ -1,12 +1,5 @@
-Good evening, students and faculty!
+After performing a statistical analysis on the provided data, the average chance of snow between 7 PM and 8 AM is estimated at 87.5%. This high probability, combined with continuously low temperatures, full cloud cover, and steady winds with strong gusts, contributes to an environment conducive to snow accumulation and potentially hazardous travel conditions.
 
-Looking at the data you've given me and bringing my teacher's intuition into the equation, it appears there's a notable chance that a snow day might be on the horizon for Rockford Public Schools.
+Considering the ongoing Winter Weather Advisory—which is indicative of a significant meteorological event impacting the surrounding counties with an additional snow accumulation forecasted—and the low visibility conditions already documented, it is scientifically reasonable to predict a substantial likelihood of a snow day. Although the reported snowfall is currently 0.0 cm, the high chance of snow coupled with the advisory's expected accumulations suggests that conditions could deteriorate overnight.
 
-Considering Michigan's frigid January weather, the continuous snowfall, and especially the Winter Weather Advisory in effect until 4 PM EST Monday, it seems quite plausible that road conditions won't be safe for travel come morning. The multiple hours of moderate snow, high chance of snow (consistently above 60%), and visibility issues throughout the night do not bode well for those braving the roads early. Furthermore, the temperature is consistently below the threshold that can prompt a school closure, with apparent temperatures due to wind chill pushing well beneath zero Fahrenheit.
-
-Given these factors, and respecting the Rockford Public Schools' policy and Superintendent Dr. Steve Matthews' thorough process, I appraise the likelihood of a snow day to be rather high. The absence of significant snow accumulation might be the sole argument against it, but when paired with the slippery conditions and pending advisory, discretion is the better part of valor.
-
-Therefore, calculating the probabilities and factoring in the various conditions described, I'd postulate there is a **75% chance** of a snow day. Please ensure you check for official communications early in the morning for confirmation. Whether it is a day of rest or study at home, stay warm and safe!
-
-Best regards,
-Your Analytical Educator
+Based on these factors, it is my scientific opinion that there is a high probability for a snow day tomorrow for Rockford Public Schools. To quantify this likelihood with a percentage, given the confluence of the high chance of continuous snowfall, the active weather advisory, and the associated risks due to low visibility and significant wind chill, I would logically deduce that the percentage chance of a snow day occurring tomorrow is greater than 87.5%—likely approaching or exceeding 90%, given the local advisory.
