@@ -75,16 +75,23 @@ def generate_chat_response(json_message):
 
 def get_assistant():
     """
-    Fetches the ID of the assistant named 'NHL Game Prediction Assistant'.
+    Fetches the ID of the assistant named 'Blizzard' or
+    'Blizzard_Testing' based on the testing mode.
 
     Returns:
-        str: The ID of the 'NHL Game Prediction Assistant', or None if not found.
+        str: The ID of the relevant assistant, or None if not found.
     """
+    # Determine the name of the assistant based on the testing mode
+    target_assistant_name = 'Blizzard_Testing' if settings.TESTING_MODE else 'Blizzard'
     current_assistants = openai.beta.assistants.list()
+
+    # Search for the assistant by name
     for assistant in current_assistants.data:
-        if assistant.name == 'Blizzard':
+        if assistant.name == target_assistant_name:
             return assistant.id
 
+    # Log if the assistant was not found
+    logging.warning("Assistant named '%s' not found.", target_assistant_name)
     return None
 
 def create_thread():
@@ -113,10 +120,14 @@ def add_message_to_thread(thread_id, content):
     Returns:
         openai.ThreadMessage: The created message object.
     """
+    file_ids = []
+    file_id = get_helping_files()
+    file_ids.append(file_id)
     message = openai.beta.threads.messages.create(
         thread_id=thread_id,
         role="user",
-        content=content
+        content=content,
+        file_ids=file_ids
     )
     return message
 
@@ -184,3 +195,19 @@ def get_messages(thread_id):
     except Exception as e:
         print(f'Error getting messages! Error: {e}')
         return None
+
+def get_helping_files():
+    """
+    Uploads a file to OpenAI and returns the file ID.
+    Assumes the file is located in the root directory of the GitHub project.
+    """
+    # Get the directory of the current script
+    current_directory = os.path.dirname(os.path.abspath(__file__))
+
+    # Go up one level to the root directory of the project
+    root_directory = os.path.dirname(current_directory)
+    file_path = os.path.join(root_directory, 'rockford_snow_day_factor_information.txt')
+
+    with open(file_path, "rb") as file_data:
+        file = openai.files.create(file=file_data, purpose="assistants")
+    return file.id

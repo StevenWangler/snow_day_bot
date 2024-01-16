@@ -11,6 +11,9 @@ SCHOOL_NAME = 'Rockford Public Schools'
 SCHOOL_COLORS = 'Orange and black'
 SCHOOL_MASCOT = 'Ram'
 SCHOOL_DISTRICT_STATE = 'Michigan'
+SCHOOL_DISTRICT_TOWN_OR_CITY = 'Rockford'
+SCHOOL_DISTRICT_COUNTY = 'Kent'
+SCHOOL_START_TIME = '7:40 AM EST'
 
 # Weather API data
 ZIP_CODE = '49341'
@@ -31,9 +34,7 @@ ENGINE_USER = None
 CHAT_COMPLETIONS_URL = 'https://api.openai.com/v1/chat/completions'
 IMAGE_GENERATION_URL = 'https://api.openai.com/v1/images/generations'
 AI_RESPONSE_THEMES = [
-                      'A weather man',
-                      'A scientist',
-                      'A high school teacher',
+                      'A weather bot'
                       ]
 
 # Communication data
