@@ -16,7 +16,9 @@ Dependencies:
 import logging
 import datetime
 import os
-from settings import settings
+import weatherapi.weather_api_calls as weather_api
+from weatherapi import weather_data
+from openai_actions import open_ai_data as openai_data
 
 BASE_SETTINGS_PATH = os.path.join('settings')
 
@@ -36,16 +38,6 @@ def configure_logging():
     current_time = datetime.datetime.now()
     logging.info('---- APPLICATION START (current date/time is: %s) ----', current_time)
 
-def get_snow_day_policy():
-    """
-    Fetches the snow day policy from a text file.
-    """
-    logging.info('Getting the snow day policy for: %s', settings.SCHOOL_NAME)
-    file_path = os.path.join(BASE_SETTINGS_PATH, 'snow_day_policy.txt')
-    with open(file_path, 'r', encoding='utf-8') as file:
-        policy = file.read()
-    return policy
-
 def write_prediction_to_file(prediction):
     """
     Records the provided prediction to a text file for historical tracking.
@@ -60,3 +52,19 @@ def write_prediction_to_file(prediction):
 
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(f'{prediction}\n')
+
+def create_snow_day_message():
+    """
+    Generate a snow day message based on weather data and the given policy.
+    
+    Args:
+        policy (dict): The snow day policy.
+    
+    Returns:
+        str: The generated snow day message.
+    """
+    # Fetch the relevant weather information
+    weather_info = weather_data.get_relevant_weather_information(weather_api.get_forecast())
+
+    # Create a message based on the weather data and policy
+    return openai_data.create_open_ai_snow_day_message(weather_info)

@@ -1,20 +1,34 @@
-2024-01-14 18:40:27,765:INFO:---- APPLICATION START (current date/time is: 2024-01-14 18:40:27.765683) ----
-2024-01-14 18:40:27,765:INFO:---- APPLICATION START ----
-2024-01-14 18:40:28,061:INFO:Getting the relevant weather info from the evening to the next morning
-2024-01-14 18:40:28,061:INFO:Creating the request message to send to OpenAI
-2024-01-14 18:40:28,496:INFO:HTTP Request: GET https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
-2024-01-14 18:40:28,719:INFO:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
-2024-01-14 18:40:29,079:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/messages "HTTP/1.1 200 OK"
-2024-01-14 18:40:29,471:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/runs "HTTP/1.1 200 OK"
-2024-01-14 18:40:29,705:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/runs/run_2aK93m45ILC5eE2VHbzxzorW "HTTP/1.1 200 OK"
-2024-01-14 18:40:39,944:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/runs/run_2aK93m45ILC5eE2VHbzxzorW "HTTP/1.1 200 OK"
-2024-01-14 18:40:50,210:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/runs/run_2aK93m45ILC5eE2VHbzxzorW "HTTP/1.1 200 OK"
-2024-01-14 18:41:00,751:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/runs/run_2aK93m45ILC5eE2VHbzxzorW "HTTP/1.1 200 OK"
-2024-01-14 18:41:00,992:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_4zVdplofMdhyv6Gw5YdcdeVv/messages "HTTP/1.1 200 OK"
-2024-01-14 18:41:01,031:INFO:Generating the OpenAI chat completion message
-2024-01-14 18:41:01,768:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-01-14 18:41:01,793:INFO:Chance of a snow day is greater than 50%
-2024-01-14 18:41:01,793:INFO:Personal testing emails: {"wangler.steven@outlook.com": "Steven"}
-2024-01-14 18:41:01,793:INFO:Sending our snowday prediction to 1 people
-2024-01-14 18:41:03,512:INFO:Message delivered
-2024-01-14 18:41:03,554:INFO:---- APPLICATION END ----
+2024-01-15 20:36:17,137:INFO:---- APPLICATION START (current date/time is: 2024-01-15 20:36:17.137188) ----
+2024-01-15 20:36:17,137:INFO:---- APPLICATION START ----
+2024-01-15 20:36:17,602:INFO:Getting the relevant weather info from the evening to the next morning
+2024-01-15 20:36:17,603:INFO:Creating the request message to send to OpenAI
+2024-01-15 20:36:17,862:INFO:HTTP Request: GET https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
+2024-01-15 20:36:17,998:INFO:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-01-15 20:36:18,630:INFO:HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2024-01-15 20:36:18,974:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/messages "HTTP/1.1 200 OK"
+2024-01-15 20:36:19,927:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs "HTTP/1.1 200 OK"
+2024-01-15 20:36:20,101:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:36:30,317:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:36:40,555:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:36:50,791:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:37:01,036:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:37:11,243:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:37:21,507:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:37:31,732:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:37:41,936:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:37:52,151:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:38:02,598:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:38:12,847:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:38:23,113:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:38:33,340:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:38:43,535:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/runs/run_BGp6eLEBNQL1CMXxoGu3cs09 "HTTP/1.1 200 OK"
+2024-01-15 20:38:43,734:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_XvCBI8wy1UyXGAoLzbgi0AZ2/messages "HTTP/1.1 200 OK"
+2024-01-15 20:38:43,744:INFO:Generating the OpenAI chat completion message
+2024-01-15 20:38:44,317:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-01-15 20:38:44,322:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2024-01-15 20:38:44,322:INFO:Application is in testing mode, sending the email anyways!
+2024-01-15 20:38:44,322:INFO:Personal testing emails: {"wangler.steven@outlook.com": "Steven"}
+2024-01-15 20:38:44,322:INFO:Testing users: {'wangler.steven@outlook.com': 'Steven'}
+2024-01-15 20:38:44,322:INFO:Sending our snowday prediction to 1 people
+2024-01-15 20:38:45,477:INFO:Message delivered
+2024-01-15 20:38:45,526:INFO:---- APPLICATION END ----

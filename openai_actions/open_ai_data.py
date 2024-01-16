@@ -13,9 +13,9 @@ Dependencies:
 """
 
 import json
-import random
 import logging
-import datetime
+from datetime import datetime
+import pytz
 from settings import settings
 
 def create_hourly_weather_summary(current_weather_data):
@@ -75,36 +75,50 @@ def create_open_ai_snow_day_message(current_weather_data):
     '''
     logging.info('Creating the request message to send to OpenAI')
     try:
+        est = pytz.timezone('America/New_York')
+        now_utc = datetime.now(pytz.utc)
+        now_est = now_utc.astimezone(est)
         hourly_summary = create_hourly_weather_summary(current_weather_data)
-        theme = random.choice(settings.AI_RESPONSE_THEMES)
-        month = datetime.date.today().month
+        month = now_est.month
         school_state = settings.SCHOOL_DISTRICT_STATE
+        school_city_town = settings.SCHOOL_DISTRICT_TOWN_OR_CITY
         school_name = settings.SCHOOL_NAME
+        school_county = settings.SCHOOL_DISTRICT_COUNTY
+        school_start_time = settings.SCHOOL_START_TIME
+        school_zip_code = settings.ZIP_CODE
+        current_time = now_est
+        print(current_time)
 
         message = f'''
-        Respond with a percentage chance that a snow day will occur tomorrow for {school_name}.
+        -----------------------------------------------------------------
+        Here is the information about the school and weather:
 
-        Here are the rules I would like you to follow:
-        1) You must respond in the tone of {theme}
-        2) Use the information below to make up your opinion
-        3) Provide a SHORT explanation of the percentage chance you came up with
-        4) Work your answer into the short explanation
-        5) Be logical and honest in your answer
-        6) If you don't think there is any chance, just say that there is a 0% chance.
+        - Current date and time: {current_time}
+        - School name: {school_name}.
+        - The school is located in the state of {school_state} - this is important
+        - The school is located in the town or city of {school_city_town}
+        - The school is located in {school_county} county
+        - Current month: {month} (of 12) - take notice here of the month and state to understand the weather more
+        - School starts at {school_start_time} tomorrow
+        - School zip code is {school_zip_code}
 
-        Additional information to consider:
-        - The school is located in the state of {school_state}
-        - Current month: {month} (of 12)
+        -----------------------------------------------------------------
 
-        Hourly weather conditions from 7 PM to 8 AM:
+        Here are the hourly weather conditions from 7 PM to 8 AM. The hours are in military time.
         {hourly_summary}
 
-        Weather alerts (if applicable):
+        -----------------------------------------------------------------
+
+        Current weather alerts (if applicable). ENSURE THE ALERT IS FOR THE COUNTY THE SCHOOL IS LISTED IN:
         - Event: {current_weather_data.get('weather_alert_event', 'No data')}
         - Description: {current_weather_data.get('weather_alert_desc', 'No data')}
         - Severity: {current_weather_data.get('weather_alert_severity', 'No data')}
         - Certainty: {current_weather_data.get('weather_alert_certainty', 'No data')}
         - Urgency: {current_weather_data.get('weather_alert_urgency', 'No data')}
+
+        -----------------------------------------------------------------
+
+        Attached is a file which explains what constitues a snow day at the school.
         '''
         message = message.replace("\n", "\\n").strip()
     except KeyError as ex:
@@ -133,7 +147,7 @@ def create_open_ai_prediction_check_message(prediction_message):
     try:
         message = f'''
         Analyze the following message and respond with ONLY the word "True" or "False". Tell me
-        if there is a greater than or equal to 50% chance of a snow day. Here is the message:
+        if there is a greater than or equal to 75% chance of a snow day. Here is the message:
         {prediction_message}
         '''
         message = message.replace("\n", "\\n")
@@ -141,5 +155,5 @@ def create_open_ai_prediction_check_message(prediction_message):
         message_object = json.loads(json.dumps([{"role": "user", "content": message}]))
         return message_object
     except Exception as ex:
-        logging.error(f'There was an error in create_open_ai_prediction_check_message. Error: {ex}')
+        logging.error('There was an error in create_open_ai_prediction_check_message. Error: %s', ex)
         return None
