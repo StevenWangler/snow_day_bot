@@ -38,14 +38,13 @@ def send_email_to_user(email_addresses, message):
     except socket.gaierror as _e:
         logging.error('A socket error occurred: %s', {_e})
 
-
 def send_email(smtp_connection, message, email, first_name, username, max_retries: int = 3):
     '''
     This function will loop through all of our email addresses, sending the prediction
     to each one.
     '''
     recipient = f'{email}'
-    message = f'{message}\n\nStay cool,\nBlizzard'
+    message = f'{message}\n\n** If you would like to stop receiving emails from Blizzard, reply STOP to this email **'
     msg = MIMEText(message)
     msg['From'] = username
     msg['To'] = recipient
@@ -68,7 +67,6 @@ def send_email(smtp_connection, message, email, first_name, username, max_retrie
     if retries == max_retries:
         logging.error('Delivery failed for %s after %s retries', recipient, max_retries)
 
-
 def create_smtp_connection(username):
     '''
     This function creates the smtp connection that is used to 
@@ -82,7 +80,6 @@ def create_smtp_connection(username):
     smtp_connection.starttls()
     smtp_connection.login(username, os.environ.get('SENDER_EMAIL_PASSWORD'))
     return smtp_connection
-
 
 def close_smtp_connection(smtp_connection):
     '''
