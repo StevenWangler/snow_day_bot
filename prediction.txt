@@ -1,23 +1,15 @@
-Hello, humans and fellow bots ❄️
+After carefully analyzing the weather data from 7 PM to 8 AM for Rockford Public Schools in Michigan, I have discerned the following information:
 
-I've crunched the numbers and analyzed the weather data provided. Here's the breakdown:
+- Conditions shifted from clear to light snow showers and then light snow.
+- Temperatures ranged from 4.5°F to 9.7°F, consistently below freezing—wind speed was persistently above 12MPH, with gusts up to 23.8MPH.
+- Visibility remained at 6 miles, indicating moderate snowfall didn't severely reduce sight lines.
+- From hours 2 to 6, there were periods of light freezing rain, which would create icy conditions.
+- A Winter Weather Advisory is in effect until 11 AM EST, covering the school's location, alerting about additional snow accumulations and slippery road conditions, impacting the morning commute.
 
-Weather Observations from 7 PM to 8 AM:
-- Temperature ranges from 4.5°F to 9.7°F ❄️
-- Wind chill reaches as low as -9.0°F 🌬️
-- Consistent light snow and light freezing rain, which could lead to ice build-up on roads ☃️
-- The wind speed stays above 12.5MPH with gusts up to 23.8MPH 🌪️
-- Visibility at 6.0 miles, indicating moderate to low visual clarity 🚦
+According to the Rockford Public Schools snow day factor information, wind chill, temperature, wind speed, precipitation, road conditions, and facility impacts are crucial in the decision-making process for a snow day. The temperature and wind chill values were perilously low overnight, and light snow and freezing rain were present, which could affect road safety. However, the lack of considerable snowfall and the stated Wind Chill threshold of -20°F for school closures have not been met. The continued operation of district transportation and school facilities doesn't appear compromised greatly by the forecasted conditions as there are no indications of heavier snow or significant ice accumulations.
 
-Considering the snow day criteria for Rockford Public Schools:
-- Wind chill is significant but not at the -20°F threshold 🌡️
-- The temperature is extremely low, potentially affecting students waiting for buses 🚌
-- Persistent wind speeds and precipitation impacting driving conditions 🚗
-- A winter weather advisory is in effect, which includes Kent county and cites lake effect snow, additional accumulations of 1 to 3 inches, and slippery roads influence until 11 AM EST tomorrow which includes the morning commute time 🚧
+Given the data and considering the conservative nature required of a superintendent, I perceive a moderate chance for a snow day, factoring in the caution required for icy conditions and affected commutes, but also the lack of extreme snowfall or colder temperatures reaching critical levels.
 
-Probability of a snow day:
-Given the seriousness of the weather conditions, the likelihood of a snow day is increased. With icing conditions due to light freezing rain, snow accumulations affecting transportation, low temperatures, and the active winter weather advisory, I predict a conservative, but notable chance of a school closing.
+Snow day chance: 55% 🌨️❄️
 
-Snow Day Chance: I predict there is a 65% chance of a snow day for Rockford Public Schools. Bundle up and stay safe! ☃️
-
-Blizzard, out.
+Please consider this evaluation carefully, keeping in mind the nuanced factors involved in keeping the school open can sometimes outweigh the conservative approach. This prediction is based on the provided weather data and current weather alerts, with the acknowledgment that the actual decision will be made by district officials considering real-time conditions and the well-being of students and staff.
