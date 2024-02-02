@@ -1,18 +1,18 @@
-2024-02-01 00:59:35,070:INFO:---- APPLICATION START (current date/time is: 2024-02-01 00:59:35.070670) ----
-2024-02-01 00:59:35,070:INFO:---- APPLICATION START ----
-2024-02-01 00:59:35,520:INFO:Getting the relevant weather info from the evening to the next morning
-2024-02-01 00:59:35,520:INFO:Creating the request message to send to OpenAI
-2024-02-01 00:59:35,787:INFO:HTTP Request: GET https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
-2024-02-01 00:59:35,949:INFO:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
-2024-02-01 00:59:36,595:INFO:HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
-2024-02-01 00:59:36,955:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_ToeIz0rWN21sRWhSNZ42nWjS/messages "HTTP/1.1 200 OK"
-2024-02-01 00:59:38,221:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_ToeIz0rWN21sRWhSNZ42nWjS/runs "HTTP/1.1 200 OK"
-2024-02-01 00:59:38,398:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_ToeIz0rWN21sRWhSNZ42nWjS/runs/run_HCtKHItgZHo41mrlGyGnY9oH "HTTP/1.1 200 OK"
-2024-02-01 00:59:48,546:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_ToeIz0rWN21sRWhSNZ42nWjS/runs/run_HCtKHItgZHo41mrlGyGnY9oH "HTTP/1.1 200 OK"
-2024-02-01 00:59:58,713:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_ToeIz0rWN21sRWhSNZ42nWjS/runs/run_HCtKHItgZHo41mrlGyGnY9oH "HTTP/1.1 200 OK"
-2024-02-01 01:00:08,850:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_ToeIz0rWN21sRWhSNZ42nWjS/runs/run_HCtKHItgZHo41mrlGyGnY9oH "HTTP/1.1 200 OK"
-2024-02-01 01:00:09,036:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_ToeIz0rWN21sRWhSNZ42nWjS/messages "HTTP/1.1 200 OK"
-2024-02-01 01:00:09,040:INFO:Generating the OpenAI chat completion message
-2024-02-01 01:00:10,364:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-02-01 01:00:10,366:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
-2024-02-01 01:00:10,367:INFO:---- APPLICATION END ----
+2024-02-02 00:56:52,141:INFO:---- APPLICATION START (current date/time is: 2024-02-02 00:56:52.141689) ----
+2024-02-02 00:56:52,141:INFO:---- APPLICATION START ----
+2024-02-02 00:56:52,374:INFO:Getting the relevant weather info from the evening to the next morning
+2024-02-02 00:56:52,374:INFO:Creating the request message to send to OpenAI
+2024-02-02 00:56:52,704:INFO:HTTP Request: GET https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
+2024-02-02 00:56:52,854:INFO:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-02-02 00:56:53,489:INFO:HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2024-02-02 00:56:53,826:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_ft1p9aRrVbZ2Wotih8QXFisP/messages "HTTP/1.1 200 OK"
+2024-02-02 00:57:25,710:INFO:HTTP Request: POST https://api.openai.com/v1/threads/thread_ft1p9aRrVbZ2Wotih8QXFisP/runs "HTTP/1.1 200 OK"
+2024-02-02 00:57:25,890:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_ft1p9aRrVbZ2Wotih8QXFisP/runs/run_z34dZ7UNTulmD7fUHuHGmIjO "HTTP/1.1 200 OK"
+2024-02-02 00:57:36,028:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_ft1p9aRrVbZ2Wotih8QXFisP/runs/run_z34dZ7UNTulmD7fUHuHGmIjO "HTTP/1.1 200 OK"
+2024-02-02 00:57:46,149:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_ft1p9aRrVbZ2Wotih8QXFisP/runs/run_z34dZ7UNTulmD7fUHuHGmIjO "HTTP/1.1 200 OK"
+2024-02-02 00:57:56,269:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_ft1p9aRrVbZ2Wotih8QXFisP/runs/run_z34dZ7UNTulmD7fUHuHGmIjO "HTTP/1.1 200 OK"
+2024-02-02 00:57:56,451:INFO:HTTP Request: GET https://api.openai.com/v1/threads/thread_ft1p9aRrVbZ2Wotih8QXFisP/messages "HTTP/1.1 200 OK"
+2024-02-02 00:57:56,455:INFO:Generating the OpenAI chat completion message
+2024-02-02 00:57:57,103:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-02-02 00:57:57,105:INFO:There is a less than 50 percent chance of a snow day. Not sending emails.
+2024-02-02 00:57:57,105:INFO:---- APPLICATION END ----
