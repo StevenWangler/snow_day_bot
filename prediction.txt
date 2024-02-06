@@ -1,7 +1,15 @@
-In analyzing the weather conditions, the temperature is consistently below freezing from 10 PM, and it remains so until the morning hours when school starts. However, there's no sign of snowfall or rainfall throughout this period. Furthermore, the wind speed is not extreme, at a maximum of 6.9 MPH, and visibility stays constant at 6 miles during the night hours.
+From our statistical analysis, I've got some averages and extremes to take into consideration:
 
-Considering these factors along with the fact that there are no weather alerts, there don't seem to be any severe weather conditions that might potentially cause unsafe traveling conditions for students or staff.
+- The average visibility is approximately 6.23 miles, and it doesn't drop below 6.0 miles at any point. This is a good sign as it means that the drivers should have a clear view of the road. 👀🛣
+  
+- Wind speeds average around 5.82 MPH throughout the night, peaking at 9.4 MPH. These are not extreme winds, so they shouldn't contribute to dangerous road conditions. 🌬
 
-Rockford Public Schools are located in Michigan, a place known for harsh winters, and thus, the community is likely well-prepared for such normal winter conditions. ❄️
+- Temperature averages about 31.88°F throughout the night, with a minimum of 30.4°F by morning around school arrival time. Temperatures are low, but without any precipitation forecasted, they shouldn't have much of an impact.
 
-Under these conditions, I estimate the likelihood of a snow day for Rockford Public Schools tomorrow at a conservative 5%. Please remember that actual conditions can vary, and the ultimate decision lies with the local authorities. ☃️🚌💼🎒🧣🧤
+- The total snowfall for the night is expected to be 0.0cm. Without any snowfall, there shouldn't be any need for snow plows or concerns of slippery roads. ❄️
+
+These factors all point towards normal winter conditions for Rockford, Michigan. There don't appear to be any hazardous conditions that would make traveling dangerous for students or staff in the morning.
+
+So, based on the forecasted data and considering our conservative approach, I would suggest that there's a **10% chance of a snow day** for Rockford Public Schools tomorrow. This prediction takes into consideration unexpected changes in weather, but again, the majority of data points towards normal school operating conditions. 📚🏫
+
+Remember, Blizzard is an advanced bot but, I strongly encourage you to stay updated with local authorities for the most accurate information. Stay warm! ❄️😊
