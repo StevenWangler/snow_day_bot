@@ -1,5 +1,11 @@
-After carefully analyzing the hourly weather conditions and applying the specified snow day criteria for Rockford Public Schools, it appears that the factors critical for a snow day decision, such as extreme wind chills (-20°F), significant snowfall, or extreme cold impacting infrastructure were not met. The temperatures stayed above the critical marks, and there were no precipitation events that would cause concern for road safety or infrastructure.
+After analyzing the hourly weather data for Rockford Public Schools, here are the key findings:
 
-Given the conservative nature that superintendents must maintain regarding snow day decisions, and the fact that no specific critical conditions for a snow day have been met according to the data provided, the probability of a snow day for Rockford Public Schools is calculated to be 0%.
+- The **lowest temperature** recorded is 39.2°F, which is far above the critical concern level for extreme cold or frostbite risk.
+- The **lowest wind chill** noted is 35.9°F, which, while chilly, does not approach the dangerous level of -20°F mentioned in the criteria.
+- The **highest wind speed** observed is 8.1MPH, which is relatively mild and unlikely to significantly exacerbate cold temperatures or reduce visibility through blowing snow.
+- There is a **0% chance of snow** reported throughout the monitoring period, indicating no expected snowfall that could impact road conditions or transportation.
+- The **average visibility** is approximately 6.2 miles, indicating relatively clear conditions throughout the night and early morning.
 
-Always remember, the safety of students and staff is paramount. Weather conditions can change so continued monitoring is always recommended. Stay warm and safe! ❄️🧣🧤
+Considering the conservative approach to granting snow days, the absence of extreme weather conditions such as significant snowfall, extreme cold, or dangerous wind chills reduces the likelihood of a snow day. Additionally, without any active weather alerts for severe conditions impacting safety and transportation infrastructure, it further diminishes the basis for a snow day.
+
+🌨 Given these observations and adopting a very conservative stance, the chance of a snow day for Rockford Public Schools is estimated at **5%**. This accounts for the low but non-zero possibility of unforeseen changes in weather conditions overnight or early morning that could drastically differ from the analyzed projections.
