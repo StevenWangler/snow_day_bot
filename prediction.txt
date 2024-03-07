@@ -1,13 +1,36 @@
-After analyzing the weather conditions from 7 PM to 8 AM for Rockford Public Schools, here's what I found:
+🌨️ Blizzard Report for Rockford Public Schools 🌨️
 
-- The lowest temperature recorded was 35.3°F, and the coldest wind chill was 29.2°F.
-- The highest wind speed was 12.5 MPH, but visibility dropped to a minimum of 2.0 miles at one point.
-- There were no instances of snow or alerts indicating severe weather conditions affecting Kent county.
+**Summary of Snow Day Criteria:**
+Rockford Public Schools consider multiple factors for a snow day decision, including:
+- **Wind Chill:** -20°F or below is critical due to increased frostbite and hypothermia risk.
+- **Temperature:** Extremely cold temperatures can affect health and infrastructure.
+- **Wind Speed:** Higher speeds worsen cold effects and can impact visibility with snowfall.
+- **Precipitation:** Amount and rate (snow, sleet, freezing rain) affect travel safety and road conditions.
+- Weather forecast accuracy and the impact on transportation and infrastructure (roads, buses, school facilities) are crucial. Decisions are dynamically made based on forecast and actual weather conditions till the early morning.
 
-Given these observations, and aligning with the conservative nature of superintendents when determining snow days, we do not have extreme weather conditions that would typically trigger a snow day, based on the established criteria. The temperatures and wind chill values, while cold, are not at extremely hazardous levels. Additionally, without significant precipitation or severe weather alerts, road and transportation conditions are expected to remain manageable.
+Given these criteria, let's analyze the hourly weather data provided for Rockford Public Schools to predict the chance of a snow day tomorrow.
 
-Considering all factors and the lack of snowfall or dangerous wind chill levels, I estimate the likelihood of a snow day for Rockford Public Schools to be at a very low level. 
+---
 
-🌨️ Snow Day Chance: 10% 🌨️
+**Analyzing Provided Weather Conditions (7 PM to 8 AM):**
+- **Temperature Range:** 44.1°F (highest at 7 PM) to 32.5°F (lowest at 7 AM)
+- **Wind Chill:** 36.8°F to 24.1°F, never reaching the -20°F criteria
+- **Wind Speed:** Max 13.0MPH, not extreme but notable for late evening to early morning
+- **Precipitation:** No snow, sleet, or freezing rain reported
+- **Cloud Coverage:** Varied but not significant for snow conditions
+- **Visibility:** Consistently 6.0 miles, suggesting no significant snowfall or heavy precipitation
 
-This prediction is made with caution, prioritizing student safety but also acknowledging the current weather data does not typically warrant a closure based on the provided snow day criteria.
+**No Active, Relevant Weather Alerts:**
+- No data provided indicates no current severe weather alerts for Kent County or Rockford specifically.
+
+**Prediction Analysis:**
+Given the weather data:
+- The temperatures are above the critical thresholds and gradually decrease overnight, indicating a cold but not severe enough condition for a snow day.
+- Wind speeds are moderate but not severe enough to significantly impact the wind chill factor to extreme levels.
+- The absence of precipitation (snow, sleet, freezing rain) substantially reduces the chances of hazardous travel conditions.
+- The lack of weather alerts suggests no imminent threat that could justify a snow day based on the conservative criteria mentioned.
+
+**Snow Day Chance Prediction:**
+Considering the conservative nature of the decision-making process and the absence of critical weather conditions that could impact safety and infrastructure negatively, the predicted chance of a snow day for Rockford Public Schools is **10%**. 
+
+Stay warm and stay prepared! 🧤🧣
